@@ -4,27 +4,31 @@
         "nombre": "Royal Canin Mini Adult 3 Kg",
         "imagen": "./img/promo1.png",
         "precioAnterior": 10300,
-        "precio": 9270
+        "precio": 9270,
+        "categorias": ["perros", "promociones"]
     },
     {
         "id": "royal-canin-gato-fit-1-5kg",
         "nombre": "Royal Canin Gato Fit 1,5 Kg",
         "imagen": "./img/promo2.png",
         "precioAnterior": 8100,
-        "precio": 7290
+        "precio": 7290,
+        "categorias": ["gatos", "promociones"]
     },
     {
         "id": "royal-canin-mini-puppy-3kg",
         "nombre": "Royal Canin  Mini Puppy 3 Kg",
         "imagen": "./img/promo3.png",
         "precioAnterior": 11250,
-        "precio": 10125
+        "precio": 10125,
+        "categorias": ["perros", "promociones"]
     },
     {
         "id": "royal-canin-gato-indoor-1-5kg",
         "nombre": "Royal Canin Gato Indoor 1,5 Kg",
         "imagen": "./img/promo4.png",
         "precioAnterior": 8100,
-        "precio": 7290
+        "precio": 7290,
+        "categorias": ["gatos", "promociones"]
     }
 ]

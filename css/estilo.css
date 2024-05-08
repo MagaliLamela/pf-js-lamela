@@ -90,7 +90,7 @@ nav ul li a {
 
 .numeroCantidad {
   position: absolute;
-  background-color: #661D58;
+  background-color: #9C4A8C;
   color: #fafafa;
   padding: 0.1rem 0.4rem;
   border-radius: 0.25rem;
@@ -308,7 +308,7 @@ footer {
 .cardsProductos {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .cardsProductos .cardIndividual {
