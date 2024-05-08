@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="La salud de tu peludo compañero es lo primero. Cuidá a tu mascota en HUELLITAS VETERINARIA. SERVICIOS CLÍNICA: Consulta veterinaria, Internaciones, Cirugía, Laboratorio, Radiografía, Ecografía. Nuestras PELUQUERÍAS: Corte y baño completo. Incluye baño, secado, corte a máquina y/o tijera, peinado, limpieza de oídos y corte de uñas.">
+    <title>Veterinaria y Peluquería Canina - Huellitas</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="shortcut icon" href="../img/logo.png">
+</head>
+
+<body>
+
+    <header class="sticky-top">
+        <div class="navbar navbar-expand-lg navbar-dark menuNavegacion container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img class="logo" src="../img/logo.png" alt="Logo de Huellitas">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 ms-auto p-2 text-center mx-auto">
+                    <li class="nav-item">
+                        <a class="active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item" href="productos-perros.html">Perros</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="productos-gatos.html">Gatos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-center buscadorCarrito">
+                    <div class="icono-buscador">
+                        <img class="buscador" src="../img/iconobuscador.png" alt="Ícono del Buscador">
+                    </div>
+                    <a class="contenedorIconoCarrito" href="carrito-compra.html">
+                        <img class="carrito" src="../img/iconocarrito.png" alt="Ícono del Carrito de Compras">
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="contenedorInputBuscador disabled">
+            <input type="text" class="inputBuscador" placeholder="Buscar producto...">
+            <button class="btnCerrarBuscador" title="Botón para Cerrar Buscador"> <i class="bi bi-x"></i> </button>
+        </div>
+    </header>
+
+    <main>
+
+        <h1 class="h1Servicios">Servicios</h1>
+
+        <section> <!-- Sección veterinaria  -->
+
+            <h2 class="h2Servicios">Clínica Veterinaria</h2>
+
+            <p class="parrafoVeterinaria">Contamos con los mejores Médicos Veterinarios con formación académica de
+                calidad
+                para ofrecerles las herramientas necesarias para cuidar de tu mascota. Visítanos para poder ayudarte y
+                ayudar a tu compañero.</p>
+
+            <div class="listaVeterinaria">
+                <div class="iconoConsultorio">
+                    <img src="../img/iconoconsultorio.png" alt="Ícono Consultorio">
+                    <h3>Consultorio</h3>
+                </div>
+                <div class="iconoInternacion">
+                    <img src="../img/iconointernacion.png" alt="Ícono Internación">
+                    <h3>Internación</h3>
+                </div>
+                <div class="iconoCirugias">
+                    <img src="../img/iconocirugia.png" alt="Ícono Cirugía">
+                    <h3>Cirugías</h3>
+                </div>
+                <div class="iconoRayos">
+                    <img src="../img/iconorayosx.png" alt="Ícono Rayos X">
+                    <h3>Rayos X</h3>
+                </div>
+                <div class="iconoLaboratorio">
+                    <img src="../img/iconolaboratorio.png" alt="Ícono Laboratorio">
+                    <h3>Laboratorio</h3>
+                </div>
+                <div class="iconoEcografia">
+                    <img src="../img/iconoecografia.png" alt="Ícono Ecografía">
+                    <h3>Ecografías</h3>
+                </div>
+            </div>
+
+            <div class="imagenesVeterinaria container-fluid">
+                <img src="../img/consultorio.jpg" alt="Foto de Consultorio">
+                <img src="../img/internacion.jpg" alt="Foto de Sector Internación">
+                <img src="../img/laboratorio.jpg" alt="Foto de Laboratorio">
+            </div>
+
+            <div id="carouselExampleCaptions" class="carousel slide carouselVeterinaria mx-auto">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/consultorio.jpg" class="d-block w-100" alt="Foto de Consultorio">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>Consultorio</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/internacion.jpg" class="d-block w-100" alt="Foto de Sector Internación">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>Internación</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/laboratorio.jpg" class="d-block w-100" alt="Foto de Laboratorio">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>Laboratorio</h4>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </section>
+
+        <section> <!-- Sección Peluquería -->
+            <h2 class="h2Servicios" data-aos="fade-down">Peluquería Canina</h2>
+            <div class="peluqueria" data-aos="fade-right">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ItuczotsDok?si=kgQhF9_fyZG6WoqM"
+                    title="Video de Peluquería Canina en YouTube" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <ul>
+                    <li> Corte y baño completo </li>
+                    <li> Corte de razas </li>
+                    <li> Baño hipoalergénico </li>
+                    <li> Limpieza de lagrimales </li>
+                    <li> Limpieza de oídos </li>
+                    <li> Corte de uñas </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer1">
+
+            <div class="localBelgrano">
+                <h3>Local Belgrano</h3>
+                <p>Av. Monroe 1655 <br> 4587-5248</p>
+            </div>
+
+            <div class="localPalermo">
+                <h3>Local Palermo</h3>
+                <p>Jerónimo Salguero 3212 <br> 4865-1547</p>
+            </div>
+
+            <div class="localRecoleta">
+                <h3>Local Recoleta</h3>
+                <p>Av. Pueyrredón 1650 <br> 4852-5751</p>
+            </div>
+
+            <div class="redes">
+                <h3>Seguinos</h3>
+                <a target="_blank" href="https://www.instagram.com">
+                    <img src="../img/logoig.png" alt="Logo de Instagram">
+                </a>
+                <a target="_blank" href="https://www.facebook.com">
+                    <img src="../img/logofb.png" alt="Logo de Facebook">
+                </a>
+                <a target="_blank" href="https://www.youtube.com">
+                    <img src="../img/logoyoutube.png" alt="Logo de Youtube">
+                </a>
+            </div>
+
+            <div class="mediosDePago">
+                <h3>Formas de pago</h3>
+                <img id="logoVisa" src="../img/logovisa.png" alt="Logo de Tarjeta Visa">
+                <img id="logoVisaDebito" src="../img/logovisadebito.png" alt="Logo de Tarjeta Visa Débito">
+                <img id="logoMaster" src="../img/logomastercard.png" alt="Logo de Tarjeta Mastercard">
+                <img id="logoAmex" src="../img/logoamex.png" alt="Logo de Tarjeta Amex">
+                <img id="logoMp" src="../img/logomercadopago.png" alt="Logo de Mercado Pago">
+            </div>
+
+        </div>
+
+        <div class="footer2">
+            <p>Conocé nuestra <a href="#">Política de Devoluciones</a>.
+                <br>
+                2023 Huellitas - Todos los derechos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+    <div>
+        <a target="_blank"
+            href="https://api.whatsapp.com/send?phone=1170238323&text=¡Hola!%20¿Cómo%20podemos%20ayudarte?">
+            <img id="logoWpp" src="../img/logowpp.png" alt="Logo de Whatsapp">
+        </a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

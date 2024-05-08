@@ -1,0 +1,60 @@
+/*Home*/
+
+.carouselHome {
+    width: 88vw;
+    margin: auto;
+    margin-top: 3px;
+    border: $colorSecundario 8px double;
+
+    img {
+        object-fit: fill;
+        height: 30rem;
+        width: 100%;
+    }
+}
+
+
+.iconosHome {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+    div {
+        display: flex inline-block;
+
+        img {
+            height: 3.7rem;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        div {
+            p:first-child {
+                font-size: 1.4rem;
+                color: $colorPrincipal;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bolder;
+                margin-bottom: 5px;
+                margin-top: 0;
+                line-height: 1.3;
+            }
+
+            p:last-child {
+                font-size: 1.2rem;
+                text-align: center;
+                font-weight: bolder;
+                color: $letraOscura;
+                margin-bottom: 0;
+                line-height: 1.3;
+            }
+        }
+    }
+}
+
+.h1Home {
+    background-color: $colorPrincipal;
+    font-size: 2rem;
+    color: $letraClara;
+    padding: 15px;
+}

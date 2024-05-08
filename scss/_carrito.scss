@@ -1,0 +1,147 @@
+/*CARRITO DE COMPRAS*/
+
+.carritoVacioYComprado {
+    p {
+        font-size: 1.5rem;
+        margin: 20px;
+        margin-bottom: 30px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        margin: 20px;
+        margin-bottom: 200px;
+        margin-top: auto;
+        background-color: $colorPrincipal;
+        padding: 10px;
+        border: $colorPrincipal solid 1px;
+        transition: all 0.3s;
+        border-radius: 15px;
+
+        &:hover {
+            background-color: $colorSecundario;
+            color: $letraClara;
+            border: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: $letraClara;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.tabla {
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    flex-direction: column;
+
+    table {
+        margin-bottom: 20px;
+
+
+        .titulosCarrito {
+            background-color: $colorPrincipal;
+            color: $letraClara;
+        }
+
+        tr {
+            border: lightgray 1px solid;
+            border-radius: 40px;
+            text-align: center;
+            padding: 10px;
+
+            td {
+                text-align: center;
+                padding: 10px;
+
+                h2 {
+                    font-size: 1.3rem;
+                }
+
+                h3 {
+                    font-size: 1.1rem;
+                }
+
+                button {
+                    @include botonPrincipal;
+                    width: 35px;
+                    height: 35px;
+                    border: lightgray 1px solid;
+                    padding: 1px;
+                }
+
+                .btnCarritoX {
+                    border-radius: 8px;
+                }
+            }
+
+            .celdaProducto {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                .imgCarrito {
+                    width: 120px;
+                    height: 100px;
+                }
+
+                h3 {
+                    color: #FC6736;
+                    font-weight: bold;
+                }
+
+            }
+
+            .celdaCantidad {
+
+                div {
+                    display: flex;
+                    justify-content: center;
+
+                    h3 {
+                        background-color: white;
+                        border: lightgray 1px solid;
+                        padding: 5px 15px;
+                        height: 35px;
+                    }
+
+                    .btnCarritoIzq {
+                        border-top-left-radius: 8px;
+                        border-bottom-left-radius: 8px;
+                    }
+
+                    .btnCarritoDer {
+                        border-top-right-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                    }
+
+                }
+            }
+        }
+
+        .celdaTotal {
+            background-color: lightgray;
+
+            h3 {
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .btnCarritoFinalizar {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+
+        button {
+            @include botonPrincipal;
+            font-size: 1.3rem;
+            border-radius: 15px;
+            padding: 10px 15px;
+        }
+    }
+}

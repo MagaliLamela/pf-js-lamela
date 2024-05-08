@@ -1,0 +1,114 @@
+/*FOOTER*/
+
+footer {
+    width: 100%;
+}
+
+.footer1 {
+    width: 100%;
+    background-color: $colorPrincipal;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 50px;
+    color: $letraClara;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    div {
+        display: inline-block;
+        text-align: center;
+        text-wrap: balance;
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+            color: $letraClara;
+            text-wrap: nowrap;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            text-wrap: nowrap;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+
+
+            img {
+                width: 2.3rem;
+                height: 2.3rem;
+                background-color: white;
+                margin: 1px;
+                border-radius: 5px;
+                padding: 3px;
+                margin-top: 6px;
+                margin-left: 4px;
+            }
+        }
+
+        img {
+            background-color: white;
+            margin: 1px;
+            border-radius: 5px;
+            margin-top: 7px;
+        }
+    }
+}
+
+#logoVisa {
+    padding: 8px;
+    @include iconosPago;
+}
+
+#logoVisaDebito {
+    @include iconosPago;
+}
+
+#logoMaster {
+    padding: 4px;
+    @include iconosPago;
+}
+
+#logoAmex {
+    @include iconosPago;
+}
+
+#logoMp {
+    padding: 4px;
+    @include iconosPago;
+}
+
+.footer2 {
+    background-color: $colorSecundario;
+    font-size: 0.9rem;
+    color: $letraClara;
+
+    p {
+        padding: 10px;
+
+        a {
+            @include anclas;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+    }
+}
+
+/*LOGO WPP FIJO*/
+
+#logoWpp {
+    width: 4rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Comprá online productos de Alimento para Gatos. Tenemos Royal Canin, Proplan y mucho más.">
+    <title>Productos para Gatos - Huellitas</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="shortcut icon" href="../img/logo.png">
+</head>
+
+<body>
+
+    <header class="sticky-top">
+        <div class="navbar navbar-expand-lg navbar-dark menuNavegacion container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img class="logo" src="../img/logo.png" alt="Logo de Huellitas">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 ms-auto p-2 text-center mx-auto">
+                    <li class="nav-item">
+                        <a class="active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item" href="productos-perros.html">Perros</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="productos-gatos.html">Gatos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-center buscadorCarrito">
+                    <div class="icono-buscador">
+                        <img class="buscador" src="../img/iconobuscador.png" alt="Ícono del Buscador">
+                    </div>
+                    <a class="contenedorIconoCarrito" href="carrito-compra.html">
+                        <img class="carrito" src="../img/iconocarrito.png" alt="Ícono del Carrito de Compras">
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="contenedorInputBuscador disabled">
+            <input type="text" class="inputBuscador" placeholder="Buscar producto...">
+            <button class="btnCerrarBuscador" title="Botón para Cerrar Buscador"> <i class="bi bi-x"></i> </button>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+
+        <h1>Productos para Gatos</h1>
+
+        <h2 class="h2Productos">Alimentos</h2>
+
+        <div class="container-fluid">
+
+            <div class="row m-3 cardsProductos">
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/rcmotherandbabycat.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Royal Canin Mother&Babycat 1.5Kg">
+
+                    <h3 class="card-title">Royal Canin Mother <br> & Babycat 1,5Kg</h3>
+                    <h4>$9.100</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/rckitten.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Royal Canin Kitten 1.5Kg">
+
+                    <h3 class="card-title">Royal Canin <br> Kitten 1,5Kg</h3>
+                    <h4>$9.100</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/promo4.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Royal Canin Gato Indoor 1.5Kg con 10% off">
+
+                    <h3 class="card-title">Royal Canin Gato <br> Indoor 1,5Kg</h3>
+                    <h4> <span> $8.100 </span> | $7.290</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/promo2.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Royal Canin Gato Fit 1.5Kg con 10% off">
+
+                    <h3 class="card-title">Royal Canin Gato <br> Fit 1,5 Kg</h3>
+                    <h4> <span> $8.100 </span> | $7.290</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/rcgatocastrado.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Royal Canin Gato Castrado 1.5Kg">
+
+                    <h3 class="card-title">Royal Canin Gato <br> Castrado 1,5 Kg</h3>
+                    <h4>$7.450</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/rcgatoageing.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Royal Canin Gato Ageing +12 1.5Kg">
+
+                    <h3 class="card-title">Royal Canin Gato <br> Ageing+12 2 Kg</h3>
+                    <h4>$12.700</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/rcgatourinary.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Royal Canin Gato Urinary 1.5Kg">
+
+                    <h3 class="card-title">Royal Canin Gato <br> Urinary 1,5 Kg</h3>
+                    <h4>$9.299</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/rcgatorenal.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Royal Canin Gato Renal 2Kg">
+
+                    <h3 class="card-title">Royal Canin Gato <br> Renal 2 Kg</h3>
+                    <h4>$9.550</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/proplankitten.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Pro Plan Kitten 3Kg">
+
+                    <h3 class="card-title">Pro Plan <br> Kitten 3kg</h3>
+                    <h4>$17.499</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/proplangatoadulto.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Pro Plan Gato Adulto 3Kg">
+
+                    <h3 class="card-title">Pro Plan Gato <br> Adulto 3kg</h3>
+                    <h4>$15.899</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/proplangatocastrado.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Pro Plan Gato Castrado 3Kg">
+
+                    <h3 class="card-title">Pro Plan Gato <br> Castrado 3kg</h3>
+                    <h4>$18.299</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <div class="card cardIndividual col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/proplangatourinary.png" class="card-img-top mx-auto"
+                        alt="Foto Alimento Pro Plan Gato Urinary 3Kg">
+
+                    <h3 class="card-title">Pro Plan Gato <br> Urinary 3kg</h3>
+                    <h4>$18.200</h4>
+                    <button type="button" class="btnProductos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </main>
+
+    <footer>
+
+        <div class="footer1">
+
+            <div class="localBelgrano">
+                <h3>Local Belgrano</h3>
+                <p>Av. Monroe 1655 <br> 4587-5248</p>
+            </div>
+
+            <div class="localPalermo">
+                <h3>Local Palermo</h3>
+                <p>Jerónimo Salguero 3212 <br> 4865-1547</p>
+            </div>
+
+            <div class="localRecoleta">
+                <h3>Local Recoleta</h3>
+                <p>Av. Pueyrredón 1650 <br> 4852-5751</p>
+            </div>
+
+            <div class="redes">
+                <h3>Seguinos</h3>
+                <a target="_blank" href="https://www.instagram.com">
+                    <img src="../img/logoig.png" alt="Logo de Instagram">
+                </a>
+                <a target="_blank" href="https://www.facebook.com">
+                    <img src="../img/logofb.png" alt="Logo de Facebook">
+                </a>
+                <a target="_blank" href="https://www.youtube.com">
+                    <img src="../img/logoyoutube.png" alt="Logo de Youtube">
+                </a>
+            </div>
+
+            <div class="mediosDePago">
+                <h3>Formas de pago</h3>
+                <img id="logoVisa" src="../img/logovisa.png" alt="Logo de Tarjeta Visa">
+                <img id="logoVisaDebito" src="../img/logovisadebito.png" alt="Logo de Tarjeta Visa Débito">
+                <img id="logoMaster" src="../img/logomastercard.png" alt="Logo de Tarjeta Mastercard">
+                <img id="logoAmex" src="../img/logoamex.png" alt="Logo de Tarjeta Amex">
+                <img id="logoMp" src="../img/logomercadopago.png" alt="Logo de Mercado Pago">
+            </div>
+
+        </div>
+
+        <div class="footer2">
+            <p>Conocé nuestra <a href="#">Política de Devoluciones</a>.
+                <br>
+                2023 Huellitas - Todos los derechos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+    <div>
+        <a target="_blank"
+            href="https://api.whatsapp.com/send?phone=1170238323&text=¡Hola!%20¿Cómo%20podemos%20ayudarte?">
+            <img id="logoWpp" src="../img/logowpp.png" alt="Logo de Whatsapp">
+        </a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

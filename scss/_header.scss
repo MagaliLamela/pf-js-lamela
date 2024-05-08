@@ -1,0 +1,120 @@
+/*HEADER*/
+
+.menuNavegacion {
+    background-color: $colorPrincipal;
+}
+
+.logo {
+    width: 10vh;
+    cursor: pointer;
+    margin-left: 7vw;
+}
+
+nav ul li {
+    list-style: none;
+    display: block;
+    margin: 0px 3vw;
+
+    a {
+        @include anclas;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+}
+
+.dropdown-item {
+    font-size: 1.4rem;
+    color: $colorPrincipal;
+    font-weight: bolder;
+    margin: 5px;
+}
+
+.dropdown-menu {
+    background-color: $letraClara;
+    border: none;
+}
+
+.dropdown-divider {
+    border-color: $colorSecundario;
+    border: 1px solid $colorSecundario;
+    border-radius: 2px;
+}
+
+.navbar-toggler {
+    color: $letraClara;
+}
+
+.navbar-toggler-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.contenedorIconoCarrito {
+    text-decoration: none;
+}
+
+.carrito {
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 5px;
+}
+
+.numeroCantidad {
+    position: absolute;
+    background-color: $colorPrincipal;
+    color: $letraClara;
+    padding: 0.10rem 0.40rem;
+    border-radius: 0.25rem;
+    margin-right: 15px;
+    font-size: 0.8rem;
+    transform: translate(-13px, 1px);
+}
+
+.buscador {
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.contenedorInputBuscador {
+    background-color: $colorPrincipal;
+    /* Color de fondo del input */
+    margin: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.8rem;
+    /* Espaciado interno del input */
+    width: 90%;
+
+    &.show {
+        display: block;
+        /* Mostrar el contenedor del campo de entrada cuando se añade la clase .show */
+    }
+
+    .inputBuscador {
+        background-color: $colorPrincipal;
+        color: $letraClara;
+        padding: 0.2rem;
+        border: none;
+        width: 95%;
+
+        &::placeholder {
+            color: $letraClara;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .btnCerrarBuscador {
+        background-color: $colorPrincipal;
+        color: $letraClara;
+        border: none;
+        padding: 1px;
+        font-size: 1.8rem;
+        margin-left: 1rem;
+    }
+}

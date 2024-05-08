@@ -1,0 +1,145 @@
+/*CARDS*/
+
+.cardsProductos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .cardIndividual {
+        border: none;
+        margin-bottom: 20px;
+        display: flex;
+        margin-top: 20px;
+        align-self: normal;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: $letraClara;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: white;
+        }
+
+        .nombreProducto {
+            text-wrap: balance;
+            width: 20rem;
+        }
+
+        img {
+            max-height: 30rem;
+            max-width: 30rem;
+            transition: all 0.3s;
+
+            &:hover {
+                transform: scale(0.9, 0.9);
+            }
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-top: 15px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            color: $colorPrincipal;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 13px;
+            margin-top: auto;
+
+
+            span {
+                font-weight: normal;
+                text-decoration: line-through;
+                opacity: 75%;
+                font-size: 1.6rem;
+            }
+        }
+
+        .btnProductos {
+            display: inline-block;
+            font-size: 1.4rem;
+            margin-top: auto;
+            @include botonPrincipal;
+            border-radius: 15px;
+        }
+    }
+}
+
+.cardsPromociones {
+
+    .cardIndividual {
+
+        h2 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-top: 15px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            color: $colorPrincipal;
+            font-size: 1.8rem;
+            margin-bottom: 13px;
+            margin-top: auto;
+
+            span {
+                font-weight: normal;
+                text-decoration: line-through;
+                opacity: 75%;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.carritoProductoAgregado {
+    height: 2.2rem;
+    margin: 10px;
+    animation-name: carritoSaltando;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes carritoSaltando {
+
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+        transform: rotateZ(0);
+    }
+}

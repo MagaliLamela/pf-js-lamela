@@ -1,0 +1,316 @@
+/*RESPONSIVE*/
+
+/*GENERAL*/
+
+@media (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 85%;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+/*HEADER*/
+
+@media (max-width: 992px) {
+    .dropdown-menu {
+        background-color: $colorPrincipal;
+    }
+
+    .dropdown-item {
+        color: $letraClara;
+    }
+
+    .dropdown-divider {
+        display: none;
+    }
+
+    .logo {
+        width: 8.5vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-item {
+        text-decoration: underline;
+        text-decoration-color: $colorPrincipal;
+        text-decoration-thickness: 5px;
+        text-underline-offset: 10px;
+        transition: all 0.3s;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $letraClara;
+            text-decoration-thickness: 5px;
+            text-underline-offset: 10px;
+        }
+    }
+
+    .buscadorCarrito {
+        margin-right: 5vw;
+    }
+}
+
+/*FOOTER*/
+
+@media (max-width: 992px) {
+    .localBelgrano {
+        grid-area: local1;
+    }
+
+    .localPalermo {
+        grid-area: local2;
+    }
+
+    .localRecoleta {
+        grid-area: local3;
+    }
+
+    .redes {
+        grid-area: redes;
+    }
+
+    .mediosDePago {
+        grid-area: mediosDePago;
+    }
+
+    .footer1 {
+        display: grid;
+        grid-template-areas: "none local1 .. redes" "none local2 .. mediosDePago" "none local3 .. mediosDePago";
+    }
+}
+
+@media (max-width: 500px) {
+    .localBelgrano {
+        grid-area: local1;
+    }
+
+    .localPalermo {
+        grid-area: local2;
+    }
+
+    .localRecoleta {
+        grid-area: local3;
+    }
+
+    .redes {
+        grid-area: redes;
+    }
+
+    .mediosDePago {
+        grid-area: mediosDePago;
+    }
+
+    .footer1 {
+        display: grid;
+        grid-template-areas: "local1 . redes" "local2 . mediosDePago" "local3 . none";
+    }
+}
+
+@media (max-width: 450px) {
+    .footer1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*HOME*/
+
+@media (max-width: 800px) {
+    .carouselHome img {
+        height: 25rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .iconosHome {
+        display: none;
+    }
+
+    .carouselHome img {
+        height: 17rem;
+    }
+}
+
+/*SERVICIOS*/
+
+@media (min-width: 993px) {
+    .carouselVeterinaria {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .imagenesVeterinaria {
+        display: none;
+    }
+
+    .parrafoVeterinaria {
+        display: none;
+    }
+
+    .listaVeterinaria {
+        display: grid;
+        grid-template-areas: "icono1 icono2 icono3" "icono4 icono5 icono6";
+    }
+}
+
+@media (max-width: 768px) {
+    .listaVeterinaria {
+        display: grid;
+        grid-template-areas: "icono1 icono2" "icono3 icono4" "icono5 icono6";
+    }
+
+    .peluqueria {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        iframe {
+            width: 90vw;
+            height: 20rem;
+        }
+    }
+
+    .carouselVeterinaria {
+        img {
+            height: 18rem;
+            width: 15rem;
+        }
+    }
+}
+
+/*CONTACTO*/
+
+@media (max-width: 992px) {
+
+    .parrafoContacto {
+        font-size: 1.8rem;
+    }
+
+    .redesFormulario {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+
+                &[type="text"],
+                &[type="email"] {
+                    display: block;
+                    width: 80vw;
+                    height: 3.1rem;
+                }
+            }
+
+            textarea {
+                display: block;
+                width: 80vw;
+                height: 12rem;
+            }
+
+            .btnContacto {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                .botonFormulario {
+                    margin-right: 15px;
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        .redes {
+            margin-bottom: 50px;
+
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+
+    .mapaLocales {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .mapa {
+            margin-bottom: 30px;
+            width: 90vw;
+            height: 25rem;
+            text-align: center;
+            align-items: center;
+        }
+
+        .locales {
+            margin-bottom: 20px;
+        }
+
+    }
+}
+
+/*CARRITO DE COMPRAS*/
+
+@media (min-width: 769px) {
+    .tabla2 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabla1 {
+        display: none;
+    }
+
+    .tabla2 {
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+
+        td:last-child {
+            text-align: end;
+            padding-right: 10px;
+
+        }
+
+        td:first-child {
+            text-align: start;
+            padding-right: 40px;
+
+            h2 {
+                font-weight: bolder;
+            }
+        }
+
+        .celdaCantidad {
+            display: flex;
+            justify-content: end;
+        }
+
+        .btnCarritoFinalizar {
+            justify-content: center;
+
+            button {
+                padding: 15px 35px;
+            }
+        }
+    }
+}

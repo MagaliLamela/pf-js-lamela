@@ -1,0 +1,1073 @@
+@charset "UTF-8";
+/*VARIABLES*/
+/*FUENTES*/
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Ubuntu&display=swap");
+/*GENERAL*/
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  background-color: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.disabled {
+  display: none;
+}
+
+/*MAIN*/
+h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 30px 0px;
+  color: #661D58;
+}
+
+/*HEADER*/
+.menuNavegacion {
+  background-color: #661D58;
+}
+
+.logo {
+  width: 10vh;
+  cursor: pointer;
+  margin-left: 7vw;
+}
+
+nav ul li {
+  list-style: none;
+  display: block;
+  margin: 0px 3vw;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fafafa;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.dropdown-item {
+  font-size: 1.4rem;
+  color: #661D58;
+  font-weight: bolder;
+  margin: 5px;
+}
+
+.dropdown-menu {
+  background-color: #fafafa;
+  border: none;
+}
+
+.dropdown-divider {
+  border-color: #9C4A8C;
+  border: 1px solid #9C4A8C;
+  border-radius: 2px;
+}
+
+.navbar-toggler {
+  color: #fafafa;
+}
+
+.navbar-toggler-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.contenedorIconoCarrito {
+  text-decoration: none;
+}
+
+.carrito {
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 5px;
+}
+
+.numeroCantidad {
+  position: absolute;
+  background-color: #661D58;
+  color: #fafafa;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.25rem;
+  margin-right: 15px;
+  font-size: 0.8rem;
+  transform: translate(-13px, 1px);
+}
+
+.buscador {
+  width: 2.7rem;
+  height: 2.7rem;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.contenedorInputBuscador {
+  background-color: #661D58;
+  /* Color de fondo del input */
+  margin: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.8rem;
+  /* Espaciado interno del input */
+  width: 90%;
+}
+.contenedorInputBuscador.show {
+  display: block;
+  /* Mostrar el contenedor del campo de entrada cuando se añade la clase .show */
+}
+.contenedorInputBuscador .inputBuscador {
+  background-color: #661D58;
+  color: #fafafa;
+  padding: 0.2rem;
+  border: none;
+  width: 95%;
+}
+.contenedorInputBuscador .inputBuscador::placeholder {
+  color: #fafafa;
+}
+.contenedorInputBuscador .inputBuscador:focus {
+  outline: none;
+}
+.contenedorInputBuscador .btnCerrarBuscador {
+  background-color: #661D58;
+  color: #fafafa;
+  border: none;
+  padding: 1px;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+
+/*FOOTER*/
+footer {
+  width: 100%;
+}
+
+.footer1 {
+  width: 100%;
+  background-color: #661D58;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 50px;
+  color: #fafafa;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.footer1 div {
+  display: inline-block;
+  text-align: center;
+  text-wrap: balance;
+}
+.footer1 div h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fafafa;
+  text-wrap: nowrap;
+}
+.footer1 div p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-wrap: nowrap;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.footer1 div a {
+  text-decoration: none;
+}
+.footer1 div a img {
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: white;
+  margin: 1px;
+  border-radius: 5px;
+  padding: 3px;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+.footer1 div img {
+  background-color: white;
+  margin: 1px;
+  border-radius: 5px;
+  margin-top: 7px;
+}
+
+#logoVisa {
+  padding: 8px;
+  width: 3rem;
+  height: 2rem;
+}
+
+#logoVisaDebito {
+  width: 3rem;
+  height: 2rem;
+}
+
+#logoMaster {
+  padding: 4px;
+  width: 3rem;
+  height: 2rem;
+}
+
+#logoAmex {
+  width: 3rem;
+  height: 2rem;
+}
+
+#logoMp {
+  padding: 4px;
+  width: 3rem;
+  height: 2rem;
+}
+
+.footer2 {
+  background-color: #9C4A8C;
+  font-size: 0.9rem;
+  color: #fafafa;
+}
+.footer2 p {
+  padding: 10px;
+}
+.footer2 p a {
+  text-decoration: none;
+  color: #fafafa;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/*LOGO WPP FIJO*/
+#logoWpp {
+  width: 4rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/*Home*/
+.carouselHome {
+  width: 88vw;
+  margin: auto;
+  margin-top: 3px;
+  border: #9C4A8C 8px double;
+}
+.carouselHome img {
+  object-fit: fill;
+  height: 30rem;
+  width: 100%;
+}
+
+.iconosHome {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.iconosHome div {
+  display: flex inline-block;
+}
+.iconosHome div img {
+  height: 3.7rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.iconosHome div div p:first-child {
+  font-size: 1.4rem;
+  color: #661D58;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  margin-top: 0;
+  line-height: 1.3;
+}
+.iconosHome div div p:last-child {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bolder;
+  color: black;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.h1Home {
+  background-color: #661D58;
+  font-size: 2rem;
+  color: #fafafa;
+  padding: 15px;
+}
+
+/*CARDS*/
+.cardsProductos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cardsProductos .cardIndividual {
+  border: none;
+  margin-bottom: 20px;
+  display: flex;
+  margin-top: 20px;
+  align-self: normal;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fafafa;
+  transition: all 0.3s;
+}
+.cardsProductos .cardIndividual:hover {
+  background-color: white;
+}
+.cardsProductos .cardIndividual .nombreProducto {
+  text-wrap: balance;
+  width: 20rem;
+}
+.cardsProductos .cardIndividual img {
+  max-height: 30rem;
+  max-width: 30rem;
+  transition: all 0.3s;
+}
+.cardsProductos .cardIndividual img:hover {
+  transform: scale(0.9, 0.9);
+}
+.cardsProductos .cardIndividual h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.cardsProductos .cardIndividual h4 {
+  color: #661D58;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 13px;
+  margin-top: auto;
+}
+.cardsProductos .cardIndividual h4 span {
+  font-weight: normal;
+  text-decoration: line-through;
+  opacity: 75%;
+  font-size: 1.6rem;
+}
+.cardsProductos .cardIndividual .btnProductos {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-top: auto;
+  background-color: #661D58;
+  color: #fafafa;
+  padding: 10px;
+  border: #661D58 solid 1px;
+  transition: all 0.3s;
+  border-radius: 15px;
+}
+.cardsProductos .cardIndividual .btnProductos:hover {
+  background-color: #9C4A8C;
+  color: #fafafa;
+  border: none;
+}
+
+.cardsPromociones .cardIndividual h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.cardsPromociones .cardIndividual h3 {
+  color: #661D58;
+  font-size: 1.8rem;
+  margin-bottom: 13px;
+  margin-top: auto;
+}
+.cardsPromociones .cardIndividual h3 span {
+  font-weight: normal;
+  text-decoration: line-through;
+  opacity: 75%;
+  font-size: 1.6rem;
+}
+
+.carritoProductoAgregado {
+  height: 2.2rem;
+  margin: 10px;
+  animation-name: carritoSaltando;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes carritoSaltando {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+/*Productos*/
+.h2Productos {
+  margin: 30px;
+  margin-left: 50px;
+  font-size: 2.1rem;
+  font-weight: bolder;
+}
+
+/*Servicios*/
+.h1Servicios {
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+
+.h2Servicios {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.8rem;
+  margin: 20px;
+  color: #661D58;
+}
+
+.parrafoVeterinaria {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 20px;
+  color: black;
+  line-height: 1.2;
+}
+
+.listaVeterinaria {
+  display: flex;
+  justify-content: space-evenly;
+}
+.listaVeterinaria div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.listaVeterinaria div img {
+  height: 6rem;
+  width: 6rem;
+}
+.listaVeterinaria div h3 {
+  font-size: 1.5rem;
+  color: #661D58;
+  text-align: center;
+  font-weight: bold;
+}
+
+.iconoConsultorio {
+  grid-area: icono1;
+}
+
+.iconoInternacion {
+  grid-area: icono2;
+}
+
+.iconoCirugias {
+  grid-area: icono3;
+}
+
+.iconoRayos {
+  grid-area: icono4;
+}
+
+.iconoLaboratorio {
+  grid-area: icono5;
+}
+
+.iconoEcografia {
+  grid-area: icono6;
+}
+
+.imagenesVeterinaria {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 0px;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.imagenesVeterinaria img {
+  width: 33.333333%;
+}
+
+.peluqueria {
+  display: flex;
+  justify-content: space-evenly;
+}
+.peluqueria iframe {
+  margin: 20px;
+  width: 37rem;
+  height: 27rem;
+}
+.peluqueria ul {
+  list-style-image: url(../img/iconoperro.png);
+  list-style-position: inside;
+  vertical-align: middle;
+  margin: 10px;
+  margin-right: 30px;
+  padding: 20px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.peluqueria ul li {
+  font-size: 1.4rem;
+  padding-right: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.carouselVeterinaria {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.carouselVeterinaria img {
+  height: 30rem;
+  width: 30rem;
+}
+
+/*Contacto*/
+.parrafoContacto {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 20px;
+  margin-bottom: 40px;
+  color: black;
+  line-height: 1.2;
+}
+
+.redesFormulario {
+  display: flex;
+  justify-content: space-evenly;
+}
+.redesFormulario .redes {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+}
+.redesFormulario .redes h2 {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #661D58;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.redesFormulario .redes .logosRedes {
+  flex-direction: row;
+}
+.redesFormulario .redes .logosRedes a {
+  text-decoration: none;
+}
+.redesFormulario .redes .logosRedes a img {
+  width: 3rem;
+  height: 3rem;
+  margin: 6px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.redesFormulario form input[type=text], .redesFormulario form input[type=email] {
+  display: block;
+  width: 40vw;
+  height: 3.1rem;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+.redesFormulario form textarea {
+  display: block;
+  width: 40vw;
+  height: 12rem;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+.redesFormulario form input:focus,
+.redesFormulario form textarea:focus {
+  outline: #661D58 solid 3px;
+}
+.redesFormulario form .btnContacto {
+  display: flex;
+  justify-content: space-around;
+}
+.redesFormulario form .btnContacto .botonFormulario {
+  background-color: #661D58;
+  color: #fafafa;
+  padding: 10px;
+  border: #661D58 solid 1px;
+  transition: all 0.3s;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  border-radius: 15px;
+}
+.redesFormulario form .btnContacto .botonFormulario:hover {
+  background-color: #9C4A8C;
+  color: #fafafa;
+  border: none;
+}
+.redesFormulario form .btnContacto .botonFormulario:active {
+  border: #661D58 1px solid;
+  font-size: 1.3rem;
+}
+
+.h2Locales {
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #661D58;
+  text-align: center;
+}
+
+.mapaLocales {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.mapaLocales .mapa {
+  margin-bottom: 30px;
+  width: 44rem;
+  height: 32rem;
+}
+.mapaLocales .locales {
+  display: flex;
+  flex-direction: column;
+}
+.mapaLocales .locales div {
+  font-size: 1.3rem;
+  text-align: start;
+  border: #9C4A8C solid 4px;
+  padding: 10px;
+  margin: 8px;
+}
+.mapaLocales .locales div h3 {
+  color: #661D58;
+  font-weight: bolder;
+  text-align: center;
+}
+.mapaLocales .locales div p span {
+  font-weight: bold;
+}
+
+/*CARRITO DE COMPRAS*/
+.carritoVacioYComprado p {
+  font-size: 1.5rem;
+  margin: 20px;
+  margin-bottom: 30px;
+}
+.carritoVacioYComprado button {
+  font-size: 1.2rem;
+  margin: 20px;
+  margin-bottom: 200px;
+  margin-top: auto;
+  background-color: #661D58;
+  padding: 10px;
+  border: #661D58 solid 1px;
+  transition: all 0.3s;
+  border-radius: 15px;
+}
+.carritoVacioYComprado button:hover {
+  background-color: #9C4A8C;
+  color: #fafafa;
+  border: none;
+}
+.carritoVacioYComprado button a {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 1.4rem;
+}
+
+.tabla {
+  display: flex;
+  justify-content: center;
+  width: 75vw;
+  flex-direction: column;
+}
+.tabla table {
+  margin-bottom: 20px;
+}
+.tabla table .titulosCarrito {
+  background-color: #661D58;
+  color: #fafafa;
+}
+.tabla table tr {
+  border: lightgray 1px solid;
+  border-radius: 40px;
+  text-align: center;
+  padding: 10px;
+}
+.tabla table tr td {
+  text-align: center;
+  padding: 10px;
+}
+.tabla table tr td h2 {
+  font-size: 1.3rem;
+}
+.tabla table tr td h3 {
+  font-size: 1.1rem;
+}
+.tabla table tr td button {
+  background-color: #661D58;
+  color: #fafafa;
+  padding: 10px;
+  border: #661D58 solid 1px;
+  transition: all 0.3s;
+  width: 35px;
+  height: 35px;
+  border: lightgray 1px solid;
+  padding: 1px;
+}
+.tabla table tr td button:hover {
+  background-color: #9C4A8C;
+  color: #fafafa;
+  border: none;
+}
+.tabla table tr td .btnCarritoX {
+  border-radius: 8px;
+}
+.tabla table tr .celdaProducto {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.tabla table tr .celdaProducto .imgCarrito {
+  width: 120px;
+  height: 100px;
+}
+.tabla table tr .celdaProducto h3 {
+  color: #FC6736;
+  font-weight: bold;
+}
+.tabla table tr .celdaCantidad div {
+  display: flex;
+  justify-content: center;
+}
+.tabla table tr .celdaCantidad div h3 {
+  background-color: white;
+  border: lightgray 1px solid;
+  padding: 5px 15px;
+  height: 35px;
+}
+.tabla table tr .celdaCantidad div .btnCarritoIzq {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.tabla table tr .celdaCantidad div .btnCarritoDer {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.tabla table .celdaTotal {
+  background-color: lightgray;
+}
+.tabla table .celdaTotal h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.tabla .btnCarritoFinalizar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+.tabla .btnCarritoFinalizar button {
+  background-color: #661D58;
+  color: #fafafa;
+  padding: 10px;
+  border: #661D58 solid 1px;
+  transition: all 0.3s;
+  font-size: 1.3rem;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+.tabla .btnCarritoFinalizar button:hover {
+  background-color: #9C4A8C;
+  color: #fafafa;
+  border: none;
+}
+
+/*RESPONSIVE*/
+/*GENERAL*/
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+}
+/*HEADER*/
+@media (max-width: 992px) {
+  .dropdown-menu {
+    background-color: #661D58;
+  }
+  .dropdown-item {
+    color: #fafafa;
+  }
+  .dropdown-divider {
+    display: none;
+  }
+  .logo {
+    width: 8.5vh;
+  }
+}
+@media (min-width: 992px) {
+  .nav-item {
+    text-decoration: underline;
+    text-decoration-color: #661D58;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 10px;
+    transition: all 0.3s;
+  }
+  .nav-item:hover {
+    text-decoration: underline;
+    text-decoration-color: #fafafa;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 10px;
+  }
+  .buscadorCarrito {
+    margin-right: 5vw;
+  }
+}
+/*FOOTER*/
+@media (max-width: 992px) {
+  .localBelgrano {
+    grid-area: local1;
+  }
+  .localPalermo {
+    grid-area: local2;
+  }
+  .localRecoleta {
+    grid-area: local3;
+  }
+  .redes {
+    grid-area: redes;
+  }
+  .mediosDePago {
+    grid-area: mediosDePago;
+  }
+  .footer1 {
+    display: grid;
+    grid-template-areas: "none local1 .. redes" "none local2 .. mediosDePago" "none local3 .. mediosDePago";
+  }
+}
+@media (max-width: 500px) {
+  .localBelgrano {
+    grid-area: local1;
+  }
+  .localPalermo {
+    grid-area: local2;
+  }
+  .localRecoleta {
+    grid-area: local3;
+  }
+  .redes {
+    grid-area: redes;
+  }
+  .mediosDePago {
+    grid-area: mediosDePago;
+  }
+  .footer1 {
+    display: grid;
+    grid-template-areas: "local1 . redes" "local2 . mediosDePago" "local3 . none";
+  }
+}
+@media (max-width: 450px) {
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*HOME*/
+@media (max-width: 800px) {
+  .carouselHome img {
+    height: 25rem;
+  }
+}
+@media (max-width: 500px) {
+  .iconosHome {
+    display: none;
+  }
+  .carouselHome img {
+    height: 17rem;
+  }
+}
+/*SERVICIOS*/
+@media (min-width: 993px) {
+  .carouselVeterinaria {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .imagenesVeterinaria {
+    display: none;
+  }
+  .parrafoVeterinaria {
+    display: none;
+  }
+  .listaVeterinaria {
+    display: grid;
+    grid-template-areas: "icono1 icono2 icono3" "icono4 icono5 icono6";
+  }
+}
+@media (max-width: 768px) {
+  .listaVeterinaria {
+    display: grid;
+    grid-template-areas: "icono1 icono2" "icono3 icono4" "icono5 icono6";
+  }
+  .peluqueria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .peluqueria iframe {
+    width: 90vw;
+    height: 20rem;
+  }
+  .carouselVeterinaria img {
+    height: 18rem;
+    width: 15rem;
+  }
+}
+/*CONTACTO*/
+@media (max-width: 992px) {
+  .parrafoContacto {
+    font-size: 1.8rem;
+  }
+  .redesFormulario {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .redesFormulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .redesFormulario form input[type=text], .redesFormulario form input[type=email] {
+    display: block;
+    width: 80vw;
+    height: 3.1rem;
+  }
+  .redesFormulario form textarea {
+    display: block;
+    width: 80vw;
+    height: 12rem;
+  }
+  .redesFormulario form .btnContacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .redesFormulario form .btnContacto .botonFormulario {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .redesFormulario .redes {
+    margin-bottom: 50px;
+  }
+  .redesFormulario .redes h3 {
+    text-align: center;
+  }
+  .mapaLocales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mapaLocales .mapa {
+    margin-bottom: 30px;
+    width: 90vw;
+    height: 25rem;
+    text-align: center;
+    align-items: center;
+  }
+  .mapaLocales .locales {
+    margin-bottom: 20px;
+  }
+}
+/*CARRITO DE COMPRAS*/
+@media (min-width: 769px) {
+  .tabla2 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .tabla1 {
+    display: none;
+  }
+  .tabla2 {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+  }
+  .tabla2 td:last-child {
+    text-align: end;
+    padding-right: 10px;
+  }
+  .tabla2 td:first-child {
+    text-align: start;
+    padding-right: 40px;
+  }
+  .tabla2 td:first-child h2 {
+    font-weight: bolder;
+  }
+  .tabla2 .celdaCantidad {
+    display: flex;
+    justify-content: end;
+  }
+  .tabla2 .btnCarritoFinalizar {
+    justify-content: center;
+  }
+  .tabla2 .btnCarritoFinalizar button {
+    padding: 15px 35px;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

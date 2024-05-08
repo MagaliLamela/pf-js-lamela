@@ -1,0 +1,23 @@
+@mixin anclas {
+    text-decoration: none;
+    color: $letraClara;
+}
+
+@mixin iconosPago {
+    width: 3rem;
+    height: 2rem;
+}
+
+@mixin botonPrincipal {
+    background-color: $colorPrincipal;
+    color: $letraClara;
+    padding: 10px;
+    border: $colorPrincipal solid 1px;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: $colorSecundario;
+        color: $letraClara;
+        border: none;
+    }
+}
