@@ -7,7 +7,7 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
     .then(data => {
         productos = data;
         // Llamados específicos para cada página
-        if (window.location.pathname.includes("index.html")) {
+        if (window.location.pathname.includes("index.html") || window.location.pathname.includes("/")) {
             rutaBaseImagenes = './';
             mostrarProductosPorCategoria("promociones", "contenedorHomeProductos");
         } else if (window.location.pathname.includes("productos-perros.html")) {
