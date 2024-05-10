@@ -56,7 +56,7 @@ function mostrarProductos(productosCategoriaOFiltrados) {
         console.log(rutaBaseImagenes);
 
         divProducto.innerHTML = `
-        <img src="${rutaBaseImagenes}${producto.imagen}" class="card-img-top mx-auto" alt="${producto.nombre}">
+        <img src="../${producto.imagen}" class="card-img-top mx-auto" alt="${producto.nombre}">
         <h2 class="card-title nombreProducto">${producto.nombre}</h2>
         <h3> 
         ${producto.precioAnterior ? `<span>$${producto.precioAnterior.toLocaleString()}</span> |` : ''}
