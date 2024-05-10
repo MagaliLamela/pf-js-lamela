@@ -53,6 +53,8 @@ function mostrarProductos(productosCategoriaOFiltrados) {
             divProducto.classList.remove("col-lg-4");
         }
 
+        console.log(rutaBaseImagenes);
+
         divProducto.innerHTML = `
         <img src="${rutaBaseImagenes}${producto.imagen}" class="card-img-top mx-auto" alt="${producto.nombre}">
         <h2 class="card-title nombreProducto">${producto.nombre}</h2>
