@@ -3,9 +3,15 @@
 let productos = [];
 
 fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
-    .then(res => res.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
         productos = data;
+        console.log(data);
         // Llamados específicos para cada página
         if (window.location.pathname === '/index.html') {
             rutaBaseImagenes = './';
@@ -20,6 +26,7 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
             rutaBaseImagenes = '../';
             cargarProductosFiltrados()
         }
+        console.log(data);
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
