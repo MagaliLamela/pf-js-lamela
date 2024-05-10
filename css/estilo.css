@@ -717,17 +717,21 @@ footer {
   text-align: center;
   padding: 10px;
 }
-.contenedorCarrito .contenedorCarritoProductos tr td, .contenedorCarrito .contenedorCarritoProductos tr th {
+.contenedorCarrito .contenedorCarritoProductos tr td,
+.contenedorCarrito .contenedorCarritoProductos tr th {
   text-align: center;
   padding: 10px;
 }
-.contenedorCarrito .contenedorCarritoProductos tr td h2, .contenedorCarrito .contenedorCarritoProductos tr th h2 {
+.contenedorCarrito .contenedorCarritoProductos tr td h2,
+.contenedorCarrito .contenedorCarritoProductos tr th h2 {
   font-size: 1.3rem;
 }
-.contenedorCarrito .contenedorCarritoProductos tr td h3, .contenedorCarrito .contenedorCarritoProductos tr th h3 {
+.contenedorCarrito .contenedorCarritoProductos tr td h3,
+.contenedorCarrito .contenedorCarritoProductos tr th h3 {
   font-size: 1.1rem;
 }
-.contenedorCarrito .contenedorCarritoProductos tr td button, .contenedorCarrito .contenedorCarritoProductos tr th button {
+.contenedorCarrito .contenedorCarritoProductos tr td button,
+.contenedorCarrito .contenedorCarritoProductos tr th button {
   background-color: #661D58;
   color: #fafafa;
   padding: 10px;
@@ -738,12 +742,14 @@ footer {
   border: lightgray 1px solid;
   padding: 1px;
 }
-.contenedorCarrito .contenedorCarritoProductos tr td button:hover, .contenedorCarrito .contenedorCarritoProductos tr th button:hover {
+.contenedorCarrito .contenedorCarritoProductos tr td button:hover,
+.contenedorCarrito .contenedorCarritoProductos tr th button:hover {
   background-color: #9C4A8C;
   color: #fafafa;
   border: none;
 }
-.contenedorCarrito .contenedorCarritoProductos tr td .btnCarritoX, .contenedorCarrito .contenedorCarritoProductos tr th .btnCarritoX {
+.contenedorCarrito .contenedorCarritoProductos tr td .btnCarritoX,
+.contenedorCarrito .contenedorCarritoProductos tr th .btnCarritoX {
   border-radius: 8px;
 }
 .contenedorCarrito .contenedorCarritoProductos tr .celdaProducto {
@@ -784,12 +790,12 @@ footer {
   font-size: 1.3rem;
   font-weight: bold;
 }
-.contenedorCarrito .btnCarritoFinalizar {
+.contenedorCarrito .contenedorBtnFinalizarCompra {
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   margin-bottom: 30px;
 }
-.contenedorCarrito .btnCarritoFinalizar button {
+.contenedorCarrito .contenedorBtnFinalizarCompra .btnCarritoFinalizar {
   background-color: #661D58;
   color: #fafafa;
   padding: 10px;
@@ -799,7 +805,7 @@ footer {
   border-radius: 15px;
   padding: 10px 15px;
 }
-.contenedorCarrito .btnCarritoFinalizar button:hover {
+.contenedorCarrito .contenedorBtnFinalizarCompra .btnCarritoFinalizar:hover {
   background-color: #9C4A8C;
   color: #fafafa;
   border: none;

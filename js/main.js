@@ -7,10 +7,7 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
     .then(data => {
         productos = data;
         // Llamados específicos para cada página
-        if (window.location.pathname.includes("index.html") || window.location.pathname.includes("/")) {
-            rutaBaseImagenes = './';
-            mostrarProductosPorCategoria("promociones", "contenedorHomeProductos");
-        } else if (window.location.pathname.includes("productos-perros.html")) {
+        if (window.location.pathname.includes("productos-perros.html")) {
             rutaBaseImagenes = '../';
             mostrarProductosPorCategoria("perros", "contenedorPerros");
         } else if (window.location.pathname.includes("productos-gatos.html")) {
@@ -19,6 +16,9 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
         } else if (window.location.pathname.includes("resultados-busqueda.html")) {
             rutaBaseImagenes = '../';
             cargarProductosFiltrados()
+        } else if (window.location.pathname.includes("index.html") || window.location.pathname.includes("/")) {
+            rutaBaseImagenes = './';
+            mostrarProductosPorCategoria("promociones", "contenedorHomeProductos");
         }
     })
 
@@ -70,7 +70,7 @@ function mostrarProductosPorCategoria(categoria, contenedorId) {
     const productosPorCategoria = productos.filter(producto => {
         return producto.categorias && producto.categorias.includes(categoria);
     });
-        mostrarProductos(productosPorCategoria);
+    mostrarProductos(productosPorCategoria);
 };
 
 //! CREO ARRAY DE CARRITO 
@@ -119,7 +119,7 @@ function agregarProductoAlCarrito(e) {
         close: true,
         offset: {
             y: 70 // vertical axis - can be a number or a string indicating unity. eg: '2em'
-          },
+        },
         style: {
             background: "#9C4A8C",
             borderRadius: "1rem",

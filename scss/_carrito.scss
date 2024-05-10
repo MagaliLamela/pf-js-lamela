@@ -53,7 +53,8 @@
             text-align: center;
             padding: 10px;
 
-            td, th {
+            td,
+            th {
                 text-align: center;
                 padding: 10px;
 
@@ -131,17 +132,18 @@
             }
         }
     }
-
-    .btnCarritoFinalizar {
+    .contenedorBtnFinalizarCompra {
         display: flex;
-        justify-content: flex-end;
+        justify-content: end;
         margin-bottom: 30px;
-
-        button {
-            @include botonPrincipal;
-            font-size: 1.3rem;
-            border-radius: 15px;
-            padding: 10px 15px;
-        }
+    .btnCarritoFinalizar {
+        
+        @include botonPrincipal;
+        font-size: 1.3rem;
+        border-radius: 15px;
+        padding: 10px 15px;
     }
 }
+    }
+
+
