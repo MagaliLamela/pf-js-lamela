@@ -21,6 +21,9 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
             cargarProductosFiltrados()
         }
     })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
 
 
 //! LLAMADOS DEL DOM
