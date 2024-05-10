@@ -1,7 +1,3 @@
-//! OBTENER LOS PRODUCTOS DEL CARRITO ALMACENADOS EN EL ALMACENAMIENTO LOCAL DEL NAVEGADOR Y PARSEARLOS
-const productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
-
-
 //! LLAMADOS DEL DOM
 const contenedorCarritoVacio = document.querySelector("#carritoVacio");
 const contenedorCarritoProductos = document.querySelector("#contenedorCarritoProductos");
@@ -35,20 +31,20 @@ function cargarProductosCarrito() {
         const tr = document.createElement("tr");
         tr.classList.add("titulosCarrito");
         tr.innerHTML = `
-        <td>
+        <th>
             <h2>Producto</h2>
-        </td>
-        <td>
+        </th>
+        <th>
             <h2>Precio</h2>
-        </td>
-        <td>
+        </th>
+        <th>
             <h2>Cantidad</h2>
-        </td>
-        <td>
+        </th>
+        <th>
             <h2>Subtotal</h2>
-        </td>
-        <td>
-        </td>
+        </th>
+        <th>
+        </th>
         `;
         contenedorCarritoProductos.append(tr);
 
@@ -57,10 +53,10 @@ function cargarProductosCarrito() {
             const tr = document.createElement("tr");
             tr.innerHTML = `
         <td class="celdaProducto">
-            <img class="imgCarrito" src=".${producto.imagen}" alt="${producto.nombre}">
+            <img class="imgCarrito" src="../${producto.imagen}" alt="${producto.nombre}">
             <h3>${producto.nombre}</h3>
         </td>
-        <td>
+        <td class="celdaPrecio">
             <h3>$${producto.precio.toLocaleString()}</h3>
         </td>
         <td class="celdaCantidad">
@@ -70,7 +66,7 @@ function cargarProductosCarrito() {
                 <button class="btnCarritoDer" data-id="${producto.id}" title="Botón para Sumar Unidades"> <i class="bi bi-plus"></i> </button>
             </div>
         </td>
-        <td>
+        <td class="celdaSubtotal">
             <h3>$${(producto.precio * producto.cantidad).toLocaleString()}</h3>
         </td>
         <td>

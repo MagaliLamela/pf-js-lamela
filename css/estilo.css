@@ -22,7 +22,7 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   margin: 30px 0px;
   color: #661D58;
 }
@@ -139,7 +139,7 @@ nav ul li a {
   border: none;
   padding: 1px;
   font-size: 1.8rem;
-  margin-left: 1rem;
+  margin-left: 0.9rem;
 }
 
 /*FOOTER*/
@@ -339,14 +339,14 @@ footer {
 .cardsProductos .cardIndividual img:hover {
   transform: scale(0.9, 0.9);
 }
-.cardsProductos .cardIndividual h3 {
+.cardsProductos .cardIndividual h2 {
   text-align: center;
   font-size: 1.6rem;
   margin-top: 15px;
   font-weight: bold;
   margin-bottom: 12px;
 }
-.cardsProductos .cardIndividual h4 {
+.cardsProductos .cardIndividual h3 {
   color: #661D58;
   text-align: center;
   font-size: 1.8rem;
@@ -354,7 +354,7 @@ footer {
   margin-bottom: 13px;
   margin-top: auto;
 }
-.cardsProductos .cardIndividual h4 span {
+.cardsProductos .cardIndividual h3 span {
   font-weight: normal;
   text-decoration: line-through;
   opacity: 75%;
@@ -375,26 +375,6 @@ footer {
   background-color: #9C4A8C;
   color: #fafafa;
   border: none;
-}
-
-.cardsPromociones .cardIndividual h2 {
-  text-align: center;
-  font-size: 1.6rem;
-  margin-top: 15px;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-.cardsPromociones .cardIndividual h3 {
-  color: #661D58;
-  font-size: 1.8rem;
-  margin-bottom: 13px;
-  margin-top: auto;
-}
-.cardsPromociones .cardIndividual h3 span {
-  font-weight: normal;
-  text-decoration: line-through;
-  opacity: 75%;
-  font-size: 1.6rem;
 }
 
 .carritoProductoAgregado {
@@ -718,98 +698,98 @@ footer {
   font-size: 1.4rem;
 }
 
-.tabla {
+.contenedorCarrito {
   display: flex;
   justify-content: center;
   width: 75vw;
   flex-direction: column;
 }
-.tabla table {
+.contenedorCarrito .contenedorCarritoProductos {
   margin-bottom: 20px;
 }
-.tabla table .titulosCarrito {
+.contenedorCarrito .contenedorCarritoProductos .titulosCarrito {
   background-color: #661D58;
   color: #fafafa;
 }
-.tabla table tr {
+.contenedorCarrito .contenedorCarritoProductos tr {
   border: lightgray 1px solid;
   border-radius: 40px;
   text-align: center;
   padding: 10px;
 }
-.tabla table tr td {
+.contenedorCarrito .contenedorCarritoProductos tr td, .contenedorCarrito .contenedorCarritoProductos tr th {
   text-align: center;
   padding: 10px;
 }
-.tabla table tr td h2 {
+.contenedorCarrito .contenedorCarritoProductos tr td h2, .contenedorCarrito .contenedorCarritoProductos tr th h2 {
   font-size: 1.3rem;
 }
-.tabla table tr td h3 {
+.contenedorCarrito .contenedorCarritoProductos tr td h3, .contenedorCarrito .contenedorCarritoProductos tr th h3 {
   font-size: 1.1rem;
 }
-.tabla table tr td button {
+.contenedorCarrito .contenedorCarritoProductos tr td button, .contenedorCarrito .contenedorCarritoProductos tr th button {
   background-color: #661D58;
   color: #fafafa;
   padding: 10px;
   border: #661D58 solid 1px;
   transition: all 0.3s;
-  width: 35px;
-  height: 35px;
+  width: 2rem;
+  height: 2rem;
   border: lightgray 1px solid;
   padding: 1px;
 }
-.tabla table tr td button:hover {
+.contenedorCarrito .contenedorCarritoProductos tr td button:hover, .contenedorCarrito .contenedorCarritoProductos tr th button:hover {
   background-color: #9C4A8C;
   color: #fafafa;
   border: none;
 }
-.tabla table tr td .btnCarritoX {
+.contenedorCarrito .contenedorCarritoProductos tr td .btnCarritoX, .contenedorCarrito .contenedorCarritoProductos tr th .btnCarritoX {
   border-radius: 8px;
 }
-.tabla table tr .celdaProducto {
+.contenedorCarrito .contenedorCarritoProductos tr .celdaProducto {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.tabla table tr .celdaProducto .imgCarrito {
+.contenedorCarrito .contenedorCarritoProductos tr .celdaProducto .imgCarrito {
   width: 120px;
   height: 100px;
 }
-.tabla table tr .celdaProducto h3 {
+.contenedorCarrito .contenedorCarritoProductos tr .celdaProducto h3 {
   color: #FC6736;
   font-weight: bold;
 }
-.tabla table tr .celdaCantidad div {
+.contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad div {
   display: flex;
   justify-content: center;
 }
-.tabla table tr .celdaCantidad div h3 {
+.contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad div h3 {
   background-color: white;
   border: lightgray 1px solid;
   padding: 5px 15px;
-  height: 35px;
+  height: 2rem;
 }
-.tabla table tr .celdaCantidad div .btnCarritoIzq {
+.contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad div .btnCarritoIzq {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
-.tabla table tr .celdaCantidad div .btnCarritoDer {
+.contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad div .btnCarritoDer {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-.tabla table .celdaTotal {
+.contenedorCarrito .contenedorCarritoProductos .celdaTotal {
   background-color: lightgray;
 }
-.tabla table .celdaTotal h3 {
+.contenedorCarrito .contenedorCarritoProductos .celdaTotal h3 {
   font-size: 1.3rem;
   font-weight: bold;
 }
-.tabla .btnCarritoFinalizar {
+.contenedorCarrito .btnCarritoFinalizar {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 30px;
 }
-.tabla .btnCarritoFinalizar button {
+.contenedorCarrito .btnCarritoFinalizar button {
   background-color: #661D58;
   color: #fafafa;
   padding: 10px;
@@ -819,7 +799,7 @@ footer {
   border-radius: 15px;
   padding: 10px 15px;
 }
-.tabla .btnCarritoFinalizar button:hover {
+.contenedorCarrito .btnCarritoFinalizar button:hover {
   background-color: #9C4A8C;
   color: #fafafa;
   border: none;
@@ -829,17 +809,17 @@ footer {
 /*GENERAL*/
 @media (max-width: 768px) {
   html {
-    font-size: 80%;
+    font-size: 78% !important;
   }
 }
 @media (min-width: 768px) {
   html {
-    font-size: 85%;
+    font-size: 85% !important;
   }
 }
 @media (min-width: 1200px) {
   html {
-    font-size: 100%;
+    font-size: 100% !important;
   }
 }
 /*HEADER*/
@@ -855,6 +835,19 @@ footer {
   }
   .logo {
     width: 8.5vh;
+  }
+  .contenedorInputBuscador .btnCerrarBuscador {
+    margin-left: 0.2rem;
+  }
+}
+@media (max-width: 700px) {
+  .contenedorInputBuscador .inputBuscador {
+    width: 93%;
+  }
+}
+@media (max-width: 505px) {
+  .contenedorInputBuscador .inputBuscador {
+    width: 88%;
   }
 }
 @media (min-width: 992px) {
@@ -1033,40 +1026,95 @@ footer {
   }
 }
 /*CARRITO DE COMPRAS*/
-@media (min-width: 769px) {
-  .tabla2 {
-    display: none;
+@media (max-width: 850px) {
+  .contenedorCarrito {
+    width: 80vw;
+  }
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad h3,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaProducto h3,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaPrecio h3,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaSubtotal h3 {
+    font-size: 1rem;
+  }
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaProducto .imgCarrito {
+    width: 100px;
+    height: 80px;
+  }
+  .contenedorCarrito .contenedorCarritoProductos .titulosCarrito th h2 {
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 768px) {
-  .tabla1 {
+  .celdaProducto .imgCarrito {
     display: none;
   }
-  .tabla2 {
-    display: flex;
-    justify-content: center;
-    width: 90vw;
+}
+@media (max-width: 600px) {
+  .contenedorCarrito {
+    width: 85vw;
   }
-  .tabla2 td:last-child {
-    text-align: end;
-    padding-right: 10px;
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad h3,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaProducto h3,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaPrecio h3,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaSubtotal h3 {
+    font-size: 0.9rem;
   }
-  .tabla2 td:first-child {
-    text-align: start;
-    padding-right: 40px;
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad button,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaProducto button,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaPrecio button,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaSubtotal button {
+    width: 1.8rem;
+    height: 1.8rem;
   }
-  .tabla2 td:first-child h2 {
-    font-weight: bolder;
+  .contenedorCarrito .contenedorCarritoProductos tr .btnCarritoX {
+    width: 1.8rem;
+    height: 1.8rem;
   }
-  .tabla2 .celdaCantidad {
-    display: flex;
-    justify-content: end;
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad div h3 {
+    height: 1.8rem;
   }
-  .tabla2 .btnCarritoFinalizar {
-    justify-content: center;
+  .contenedorCarrito .contenedorCarritoProductos .titulosCarrito th h2 {
+    font-size: 1.1rem;
   }
-  .tabla2 .btnCarritoFinalizar button {
-    padding: 15px 35px;
+}
+@media (max-width: 500px) {
+  .contenedorCarrito {
+    width: 95vw;
+  }
+  .contenedorCarrito .contenedorCarritoProductos {
+    font-size: 80%;
+  }
+  .contenedorCarrito .contenedorCarritoProductos tr td, .contenedorCarrito .contenedorCarritoProductos tr th {
+    padding: 5px;
+  }
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad h3,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaProducto h3,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaPrecio h3,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaSubtotal h3 {
+    font-size: 0.7rem;
+  }
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad button,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaProducto button,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaPrecio button,
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaSubtotal button {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .contenedorCarrito .contenedorCarritoProductos tr .btnCarritoX {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad div h3 {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 3px;
+  }
+  .contenedorCarrito .contenedorCarritoProductos .titulosCarrito th h2 {
+    font-size: 0.8rem;
+  }
+  .contenedorCarrito .btnCarritoFinalizar button {
+    font-size: 1.1rem;
+    padding: 7px 12px;
   }
 }
 

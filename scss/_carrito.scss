@@ -32,13 +32,13 @@
     }
 }
 
-.tabla {
+.contenedorCarrito {
     display: flex;
     justify-content: center;
     width: 75vw;
     flex-direction: column;
 
-    table {
+    .contenedorCarritoProductos {
         margin-bottom: 20px;
 
 
@@ -53,7 +53,7 @@
             text-align: center;
             padding: 10px;
 
-            td {
+            td, th {
                 text-align: center;
                 padding: 10px;
 
@@ -67,8 +67,8 @@
 
                 button {
                     @include botonPrincipal;
-                    width: 35px;
-                    height: 35px;
+                    width: 2rem;
+                    height: 2rem;
                     border: lightgray 1px solid;
                     padding: 1px;
                 }
@@ -105,7 +105,7 @@
                         background-color: white;
                         border: lightgray 1px solid;
                         padding: 5px 15px;
-                        height: 35px;
+                        height: 2rem;
                     }
 
                     .btnCarritoIzq {

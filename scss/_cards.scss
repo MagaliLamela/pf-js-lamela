@@ -38,7 +38,7 @@
             }
         }
 
-        h3 {
+        h2 {
             text-align: center;
             font-size: 1.6rem;
             margin-top: 15px;
@@ -46,14 +46,13 @@
             margin-bottom: 12px;
         }
 
-        h4 {
+        h3 {
             color: $colorPrincipal;
             text-align: center;
             font-size: 1.8rem;
             font-weight: bold;
             margin-bottom: 13px;
             margin-top: auto;
-
 
             span {
                 font-weight: normal;
@@ -69,34 +68,6 @@
             margin-top: auto;
             @include botonPrincipal;
             border-radius: 15px;
-        }
-    }
-}
-
-.cardsPromociones {
-
-    .cardIndividual {
-
-        h2 {
-            text-align: center;
-            font-size: 1.6rem;
-            margin-top: 15px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        h3 {
-            color: $colorPrincipal;
-            font-size: 1.8rem;
-            margin-bottom: 13px;
-            margin-top: auto;
-
-            span {
-                font-weight: normal;
-                text-decoration: line-through;
-                opacity: 75%;
-                font-size: 1.6rem;
-            }
         }
     }
 }

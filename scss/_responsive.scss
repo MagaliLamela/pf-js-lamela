@@ -4,19 +4,19 @@
 
 @media (max-width: 768px) {
     html {
-        font-size: 80%;
+        font-size: 78% !important;
     }
 }
 
 @media (min-width: 768px) {
     html {
-        font-size: 85%;
+        font-size: 85% !important;
     }
 }
 
 @media (min-width: 1200px) {
     html {
-        font-size: 100%;
+        font-size: 100% !important;
     }
 }
 
@@ -38,7 +38,31 @@
     .logo {
         width: 8.5vh;
     }
+
+    .contenedorInputBuscador {     
+        .btnCerrarBuscador {
+            margin-left: 0.2rem;
+        }
+    }
 }
+
+
+@media (max-width: 700px) {
+    .contenedorInputBuscador { 
+        .inputBuscador {
+            width: 93%;
+            }
+    }
+}
+
+@media (max-width: 505px) {
+    .contenedorInputBuscador { 
+        .inputBuscador {
+            width: 88%;
+            }
+    }
+}
+
 
 @media (min-width: 992px) {
     .nav-item {
@@ -269,47 +293,150 @@
 
 /*CARRITO DE COMPRAS*/
 
-@media (min-width: 769px) {
-    .tabla2 {
-        display: none;
+@media (max-width: 850px) {
+    .contenedorCarrito {
+        width: 80vw;
+        .contenedorCarritoProductos {
+            tr {
+                .celdaCantidad,
+                .celdaProducto,
+                .celdaPrecio,
+                .celdaSubtotal {
+                    h3 {
+                        font-size: 1rem;
+                    }
+
+                }
+
+                .celdaProducto {
+                    .imgCarrito {
+                        width: 100px;
+                        height: 80px;
+                    }
+                }
+            }
+
+            .titulosCarrito {
+                th{
+                    h2 {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media (max-width: 768px) {
-    .tabla1 {
-        display: none;
-    }
-
-    .tabla2 {
-        display: flex;
-        justify-content: center;
-        width: 90vw;
-
-        td:last-child {
-            text-align: end;
-            padding-right: 10px;
-
+    .celdaProducto {
+        .imgCarrito {
+            display: none;
         }
+    }
+}
 
-        td:first-child {
-            text-align: start;
-            padding-right: 40px;
+@media (max-width: 600px) {
+    .contenedorCarrito {
+        width: 85vw;
+        .contenedorCarritoProductos {
+            tr {
 
-            h2 {
-                font-weight: bolder;
+                .celdaCantidad,
+                .celdaProducto,
+                .celdaPrecio,
+                .celdaSubtotal {
+                    h3 {
+                        font-size: 0.9rem;
+                    }
+
+                    button {
+                        width: 1.8rem;
+                        height: 1.8rem;
+                    }
+
+                }
+
+                .btnCarritoX {
+                    width: 1.8rem;
+                        height: 1.8rem;
+                }
+
+                .celdaCantidad {
+                    div {
+                        h3 {
+
+                            height: 1.8rem;
+                        }
+                    }
+                }
+            }
+
+            .titulosCarrito {
+                th{
+                    h2 {
+                        font-size: 1.1rem;
+                    }
+                }
             }
         }
+    }
+}
 
-        .celdaCantidad {
-            display: flex;
-            justify-content: end;
+@media (max-width: 500px) {
+    .contenedorCarrito {
+        width: 95vw;
+        .contenedorCarritoProductos {
+            font-size: 80%;
+            tr {
+
+                td, th {
+                    padding: 5px;
+                }
+
+                .celdaCantidad,
+                .celdaProducto,
+                .celdaPrecio, 
+                .celdaSubtotal {
+                    h3 {
+                        font-size: 0.7rem;
+                    }
+
+                    button {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                    }
+
+                }
+
+                .btnCarritoX {
+                    width: 1.6rem;
+                        height: 1.6rem;
+                }
+
+                .celdaCantidad {
+                    div {
+                        h3 {
+                            width: 1.6rem;
+                            height: 1.6rem;
+                            padding: 3px;
+                        }
+                    }
+                }
+            }
+
+            .titulosCarrito {
+                th{
+                    h2 {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
         }
-
-        .btnCarritoFinalizar {
-            justify-content: center;
-
+       
+        .btnCarritoFinalizar {    
             button {
-                padding: 15px 35px;
+                font-size: 1.1rem;
+                padding: 7px 12px;
             }
         }
     }

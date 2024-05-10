@@ -1,34 +1,226 @@
 [
     {
-        "id": "royal-canin-mini-adult-3kg",
-        "nombre": "Royal Canin Mini Adult 3 Kg",
-        "imagen": "./img/promo1.png",
-        "precioAnterior": 10300,
-        "precio": 9270,
-        "categorias": ["perros", "promociones"]
-    },
-    {
-        "id": "royal-canin-gato-fit-1-5kg",
-        "nombre": "Royal Canin Gato Fit 1,5 Kg",
-        "imagen": "./img/promo2.png",
-        "precioAnterior": 8100,
-        "precio": 7290,
-        "categorias": ["gatos", "promociones"]
-    },
-    {
         "id": "royal-canin-mini-puppy-3kg",
-        "nombre": "Royal Canin  Mini Puppy 3 Kg",
-        "imagen": "./img/promo3.png",
+        "nombre": "Royal Canin Mini Puppy 3 Kg",
+        "imagen": "img/promo3.png",
         "precioAnterior": 11250,
         "precio": 10125,
-        "categorias": ["perros", "promociones"]
+        "categorias": [
+            "perros",
+            "promociones"
+        ]
+    },
+    {
+        "id": "royal-canin-mother-and-babycat-1-5kg",
+        "nombre": "Royal Canin Mother & Babycat 1,5 Kg",
+        "imagen": "img/rcmotherandbabycat.png",
+        "precio": 9100,
+        "categorias": [
+            "gatos"
+        ]
+    },
+    {
+        "id": "royal-canin-kitten-1-5kg",
+        "nombre": "Royal Canin <br> Kitten 1,5 Kg",
+        "imagen": "img/rckitten.png",
+        "precio": 9100,
+        "categorias": [
+            "gatos"
+        ]
     },
     {
         "id": "royal-canin-gato-indoor-1-5kg",
         "nombre": "Royal Canin Gato Indoor 1,5 Kg",
-        "imagen": "./img/promo4.png",
+        "imagen": "img/promo4.png",
         "precioAnterior": 8100,
         "precio": 7290,
-        "categorias": ["gatos", "promociones"]
+        "categorias": [
+            "gatos",
+            "promociones"
+        ]
+    },
+    {
+        "id": "royal-canin-mini-adult-3kg",
+        "nombre": "Royal Canin Mini Adult 3 Kg",
+        "imagen": "img/promo1.png",
+        "precioAnterior": 10300,
+        "precio": 9270,
+        "categorias": [
+            "perros",
+            "promociones"
+        ]
+    },    
+    {
+        "id": "royal-canin-gato-fit-1-5kg",
+        "nombre": "Royal Canin Gato Fit 1,5 Kg",
+        "imagen": "img/promo2.png",
+        "precioAnterior": 8100,
+        "precio": 7290,
+        "categorias": [
+            "gatos",
+            "promociones"
+        ]
+    },
+    {
+        "id": "royal-canin-medium-puppy-3kg",
+        "nombre": "Royal Canin Medium Puppy 3 Kg",
+        "imagen": "img/rcperromediumpuppy.png",
+        "precio": 10999,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "royal-canin-medium-adult-3kg",
+        "nombre": "Royal Canin Medium Adult 3 Kg",
+        "imagen": "img/rcperromediumadult.png",
+        "precio": 9850,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "royal-canin-maxi-puppy-3kg",
+        "nombre": "Royal Canin Maxi Puppy 3 Kg",
+        "imagen": "img/rcperromaxipuppy.png",
+        "precio": 10999,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "royal-canin-maxi-adult-3kg",
+        "nombre": "Royal Canin Maxi Adult 3 Kg",
+        "imagen": "img/rcperromaxiadult.png",
+        "precio": 9799,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "proplan-perro-mini-puppy-3kg",
+        "nombre": "Pro Plan Cachorro Raza Pequeña 3 Kg",
+        "imagen": "img/proplanperrominipuppy.png",
+        "precio": 12800,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "proplan-perro-mini-adult-3kg",
+        "nombre": "Pro Plan Adulto Raza Pequeña 3 Kg",
+        "imagen": "img/proplanperrominiadult.png",
+        "precio": 11100,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "proplan-perro-medium-puppy-3kg",
+        "nombre": "Pro Plan Cachorro Raza Mediana 3 Kg",
+        "imagen": "img/proplanperromediumpuppy.png",
+        "precio": 12200,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "proplan-perro-medium-adult-3kg",
+        "nombre": "Pro Plan Adulto Raza Mediana 3 Kg",
+        "imagen": "img/proplanperromediumadult.png",
+        "precio": 11100,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "proplan-perro-maxi-puppy-3kg",
+        "nombre": "Pro Plan Cachorro Raza Grande 3 Kg",
+        "imagen": "img/proplanperromaxipuppy.png",
+        "precio": 12200,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "proplan-perro-maxi-adult-3kg",
+        "nombre": "Pro Plan Adulto Raza Grande 3 Kg",
+        "imagen": "img/proplanperromaxiadult.png",
+        "precio": 11100,
+        "categorias": [
+            "perros"
+        ]
+    },
+    {
+        "id": "royal-canin-gato-castrado-1-5kg",
+        "nombre": "Royal Canin Gato Castrado 1,5 Kg",
+        "imagen": "img/rcgatocastrado.png",
+        "precio": 7450,
+        "categorias": [
+            "gatos"
+        ]
+    },
+    {
+        "id": "royal-canin-gato-ageing-1-5kg",
+        "nombre": "Royal Canin Gato Ageing +12 1,5 Kg",
+        "imagen": "img/rcgatoageing.png",
+        "precio": 12700,
+        "categorias": [
+            "gatos"
+        ]
+    },
+    {
+        "id": "royal-canin-gato-urinary-1-5kg",
+        "nombre": "Royal Canin Gato Urinary 1,5 Kg",
+        "imagen": "img/rcgatourinary.png",
+        "precio": 9299,
+        "categorias": [
+            "gatos"
+        ]
+    },
+    {
+        "id": "royal-canin-gato-renal-1-5kg",
+        "nombre": "Royal Canin Gato Renal 1,5 Kg",
+        "imagen": "img/rcgatorenal.png",
+        "precio": 9550,
+        "categorias": [
+            "gatos"
+        ]
+    },
+    {
+        "id": "proplan-kitten-3kg",
+        "nombre": "Pro Plan <br> Kitten 3 Kg",
+        "imagen": "img/proplankitten.png",
+        "precio": 17499,
+        "categorias": [
+            "gatos"
+        ]
+    },
+    {
+        "id": "proplan-gato-adulto-3kg",
+        "nombre": "Pro Plan Gato <br> Adulto 3 Kg",
+        "imagen": "img/proplangatoadulto.png",
+        "precio": 15899,
+        "categorias": [
+            "gatos"
+        ]
+    },
+    {
+        "id": "proplan-gato-castrado-3kg",
+        "nombre": "Pro Plan Gato Castrado 3 Kg",
+        "imagen": "img/proplangatocastrado.png",
+        "precio": 18299,
+        "categorias": [
+            "gatos"
+        ]
+    },
+    {
+        "id": "proplan-gato-urinary-3kg",
+        "nombre": "Pro Plan Gato Urinary 3 Kg",
+        "imagen": "img/proplangatourinary.png",
+        "precio": 18200,
+        "categorias": [
+            "gatos"
+        ]
     }
 ]
