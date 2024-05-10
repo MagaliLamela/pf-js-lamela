@@ -34,7 +34,7 @@ inputBuscador.addEventListener("keypress", function (event) {
         localStorage.setItem("terminosBusqueda", terminosBusqueda);
 
         // Redirige a la página de resultados de búsqueda
-        if (window.location.pathname === '/index.html') {
+        if (window.location.pathname.includes("index.html")) {
             window.location.href = "./html/resultados-busqueda.html";
         } else {
             window.location.href = "./resultados-busqueda.html";

@@ -3,35 +3,24 @@
 let productos = [];
 
 fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
+    .then(res => res.json())
     .then(data => {
         productos = data;
-        console.log(data);
         // Llamados específicos para cada página
         if (window.location.pathname.includes("index.html")) {
             rutaBaseImagenes = './';
-            mostrarProductosPorCategoria();
+            mostrarProductosPorCategoria("promociones", "contenedorHomeProductos");
         } else if (window.location.pathname.includes("productos-perros.html")) {
             rutaBaseImagenes = '../';
-            mostrarProductosPorCategoria();
+            mostrarProductosPorCategoria("perros", "contenedorPerros");
         } else if (window.location.pathname.includes("productos-gatos.html")) {
             rutaBaseImagenes = '../';
-            mostrarProductosPorCategoria();
+            mostrarProductosPorCategoria("gatos", "contenedorGatos");
         } else if (window.location.pathname.includes("resultados-busqueda.html")) {
             rutaBaseImagenes = '../';
             cargarProductosFiltrados()
         }
-                console.log(data);
     })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-    });
-
 
 //! LLAMADOS DEL DOM
 let btnAgregar;
@@ -72,18 +61,17 @@ function mostrarProductos(productosCategoriaOFiltrados) {
 
 }
 
-//! Función para mostrar productos de una categoría específica en el DOM
-function mostrarProductosPorCategoria() {
+// Función para mostrar productos de una categoría específica en el DOM
+function mostrarProductosPorCategoria(categoria, contenedorId) {
     // Obtener el contenedor donde se mostrarán los productos
-    contenedorProductos = document.getElementById("contenedorPerros");
+    contenedorProductos = document.getElementById(contenedorId);
 
     // Filtrar los productos por la categoría especificada
     const productosPorCategoria = productos.filter(producto => {
-        return producto.categorias && producto.categorias.includes("perros");
+        return producto.categorias && producto.categorias.includes(categoria);
     });
         mostrarProductos(productosPorCategoria);
 };
-
 
 //! CREO ARRAY DE CARRITO 
 // Array que almacena los productos seleccionados por el usuario para su compra.
