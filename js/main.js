@@ -111,7 +111,7 @@ function agregarProductoAlCarrito(e) {
 
     // Mostrar mensaje de confirmación de agregado al carrito
     const nodoContenidoToastify = document.createElement('div');
-    nodoContenidoToastify.innerHTML = '<img src="../img/iconocarrito3.png" class="carritoProductoAgregado" alt="Ícono del Carrito con Producto Agregado"> Producto agregado al carrito';
+    nodoContenidoToastify.innerHTML = '<img src="https://magalilamela.github.io/pf-js-lamela/img/iconocarrito3.png" class="carritoProductoAgregado" alt="Ícono del Carrito con Producto Agregado"> Producto agregado al carrito';
 
     Toastify({
         node: nodoContenidoToastify,
