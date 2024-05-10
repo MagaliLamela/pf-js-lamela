@@ -13,13 +13,13 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
         productos = data;
         console.log(data);
         // Llamados específicos para cada página
-        if (window.location.pathname === '/index.html') {
+        if (window.location.pathname.includes("index.html")) {
             rutaBaseImagenes = './';
             mostrarProductosPorCategoria();
-        } else if (window.location.pathname === '/html/productos-perros.html') {
+        } else if (window.location.pathname.includes("productos-perros.html")) {
             rutaBaseImagenes = '../';
             mostrarProductosPorCategoria();
-        } else if (window.location.pathname === '/html/productos-gatos.html') {
+        } else if (window.location.pathname.includes("productos-gatos.html")) {
             rutaBaseImagenes = '../';
             mostrarProductosPorCategoria();
         } else if (window.location.pathname.includes("resultados-busqueda.html")) {
