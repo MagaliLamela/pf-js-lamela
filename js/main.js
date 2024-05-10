@@ -2,7 +2,7 @@
 // Array que contiene información sobre los productos disponibles
 let productos = [];
 
-fetch("../data/productos.json")
+fetch("./data/productos.json")
     .then(res => res.json())
     .then(data => {
         productos = data;
