@@ -15,18 +15,18 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
         // Llamados específicos para cada página
         if (window.location.pathname === '/index.html') {
             rutaBaseImagenes = './';
-            mostrarProductosPorCategoria("promociones", "contenedorHomeProductos");
+            mostrarProductosPorCategoria();
         } else if (window.location.pathname === '/html/productos-perros.html') {
             rutaBaseImagenes = '../';
-            mostrarProductosPorCategoria("perros", "contenedorPerros");
+            mostrarProductosPorCategoria();
         } else if (window.location.pathname === '/html/productos-gatos.html') {
             rutaBaseImagenes = '../';
-            mostrarProductosPorCategoria("gatos", "contenedorGatos");
+            mostrarProductosPorCategoria();
         } else if (window.location.pathname.includes("resultados-busqueda.html")) {
             rutaBaseImagenes = '../';
             cargarProductosFiltrados()
         }
-        console.log(data);
+                console.log(data);
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
@@ -53,10 +53,8 @@ function mostrarProductos(productosCategoriaOFiltrados) {
             divProducto.classList.remove("col-lg-4");
         }
 
-        console.log(rutaBaseImagenes);
-
         divProducto.innerHTML = `
-        <img src="../${producto.imagen}" class="card-img-top mx-auto" alt="${producto.nombre}">
+        <img src="${rutaBaseImagenes}${producto.imagen}" class="card-img-top mx-auto" alt="${producto.nombre}">
         <h2 class="card-title nombreProducto">${producto.nombre}</h2>
         <h3> 
         ${producto.precioAnterior ? `<span>$${producto.precioAnterior.toLocaleString()}</span> |` : ''}
@@ -74,17 +72,18 @@ function mostrarProductos(productosCategoriaOFiltrados) {
 
 }
 
-// Función para mostrar productos de una categoría específica en el DOM
-function mostrarProductosPorCategoria(categoria, contenedorId) {
+//! Función para mostrar productos de una categoría específica en el DOM
+function mostrarProductosPorCategoria() {
     // Obtener el contenedor donde se mostrarán los productos
-    contenedorProductos = document.getElementById(contenedorId);
+    contenedorProductos = document.getElementById("contenedorPerros");
 
     // Filtrar los productos por la categoría especificada
     const productosPorCategoria = productos.filter(producto => {
-        return producto.categorias && producto.categorias.includes(categoria);
+        return producto.categorias && producto.categorias.includes("perros");
     });
         mostrarProductos(productosPorCategoria);
 };
+
 
 //! CREO ARRAY DE CARRITO 
 // Array que almacena los productos seleccionados por el usuario para su compra.
