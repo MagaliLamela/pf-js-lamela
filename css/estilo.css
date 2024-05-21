@@ -340,6 +340,7 @@ footer {
   transform: scale(0.9, 0.9);
 }
 .cardsProductos .cardIndividual h2 {
+  color: black;
   text-align: center;
   font-size: 1.6rem;
   margin-top: 15px;
@@ -409,6 +410,10 @@ footer {
     transform: rotateZ(0);
   }
 }
+.anclaProductos {
+  text-decoration: none;
+}
+
 /*Productos*/
 .h2Productos {
   margin: 30px;
@@ -811,6 +816,75 @@ footer {
   border: none;
 }
 
+.contenedorImagenTitulo {
+  margin: 3rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.contenedorImagenTitulo img {
+  width: 30rem;
+  height: 28rem;
+  margin-right: 1.8rem;
+  margin-top: 1rem;
+}
+.contenedorImagenTitulo div {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 60%;
+}
+.contenedorImagenTitulo div h1 {
+  font-size: 2rem;
+  text-align: start;
+  margin-bottom: 10px;
+  color: black;
+}
+.contenedorImagenTitulo div h2 {
+  font-size: 1.7rem;
+  color: #661D58;
+  margin-bottom: 1px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.contenedorImagenTitulo div h2 span {
+  font-weight: normal;
+  text-decoration: line-through;
+  opacity: 75%;
+}
+.contenedorImagenTitulo div button {
+  background-color: #661D58;
+  color: #fafafa;
+  padding: 10px;
+  border: #661D58 solid 1px;
+  transition: all 0.3s;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}
+.contenedorImagenTitulo div button:hover {
+  background-color: #9C4A8C;
+  color: #fafafa;
+  border: none;
+}
+.contenedorImagenTitulo div p {
+  font-size: 1rem;
+  line-height: 2.2;
+}
+.contenedorImagenTitulo div p span {
+  font-weight: bold;
+}
+
+.contenedorInfo {
+  margin: 4rem;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  font-size: 1.1rem;
+  color: black;
+  opacity: 75%;
+  text-align: justify;
+  line-height: 1.7;
+}
+
 /*RESPONSIVE*/
 /*GENERAL*/
 @media (max-width: 768px) {
@@ -1090,7 +1164,8 @@ footer {
   .contenedorCarrito .contenedorCarritoProductos {
     font-size: 80%;
   }
-  .contenedorCarrito .contenedorCarritoProductos tr td, .contenedorCarrito .contenedorCarritoProductos tr th {
+  .contenedorCarrito .contenedorCarritoProductos tr td,
+  .contenedorCarrito .contenedorCarritoProductos tr th {
     padding: 5px;
   }
   .contenedorCarrito .contenedorCarritoProductos tr .celdaCantidad h3,
@@ -1121,6 +1196,24 @@ footer {
   .contenedorCarrito .btnCarritoFinalizar button {
     font-size: 1.1rem;
     padding: 7px 12px;
+  }
+}
+@media (max-width: 1024px) {
+  .contenedorImagenTitulo {
+    display: flex;
+    /* Cambia inline-flex a flex */
+    flex-direction: column;
+    margin: 2rem 4rem;
+  }
+  .contenedorImagenTitulo div {
+    width: 100%;
+  }
+  .contenedorImagenTitulo div button, .contenedorImagenTitulo div p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .contenedorImagenTitulo img {
+    align-self: center;
   }
 }
 

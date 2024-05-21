@@ -16,6 +16,8 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
         } else if (window.location.pathname.includes("resultados-busqueda.html")) {
             rutaBaseImagenes = '../';
             cargarProductosFiltrados()
+        }  else if (window.location.pathname.includes("servicios.html") || window.location.pathname.includes("contacto") || window.location.pathname.includes("producto.html")) {
+            rutaBaseImagenes = '../';
         } else if (window.location.pathname.includes("index.html") || window.location.pathname.includes("/")) {
             rutaBaseImagenes = './';
             mostrarProductosPorCategoria("promociones", "contenedorHomeProductos");
@@ -43,12 +45,14 @@ function mostrarProductos(productosCategoriaOFiltrados) {
         }
 
         divProducto.innerHTML = `
+        <a href="/html/producto.html?id=${producto.id}" class="anclaProductos">
         <img src="${rutaBaseImagenes}${producto.imagen}" class="card-img-top mx-auto" alt="${producto.nombre}">
         <h2 class="card-title nombreProducto">${producto.nombre}</h2>
         <h3> 
         ${producto.precioAnterior ? `<span>$${producto.precioAnterior.toLocaleString()}</span> |` : ''}
             $${producto.precio.toLocaleString()} 
         </h3>
+        </a>
         <button type="button" class="btnProductos" id="${producto.id}"> Añadir al Carrito </button>
       `;
 

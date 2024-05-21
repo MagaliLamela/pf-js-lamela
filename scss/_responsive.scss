@@ -39,7 +39,7 @@
         width: 8.5vh;
     }
 
-    .contenedorInputBuscador {     
+    .contenedorInputBuscador {
         .btnCerrarBuscador {
             margin-left: 0.2rem;
         }
@@ -48,18 +48,18 @@
 
 
 @media (max-width: 700px) {
-    .contenedorInputBuscador { 
+    .contenedorInputBuscador {
         .inputBuscador {
             width: 93%;
-            }
+        }
     }
 }
 
 @media (max-width: 505px) {
-    .contenedorInputBuscador { 
+    .contenedorInputBuscador {
         .inputBuscador {
             width: 88%;
-            }
+        }
     }
 }
 
@@ -296,8 +296,10 @@
 @media (max-width: 850px) {
     .contenedorCarrito {
         width: 80vw;
+
         .contenedorCarritoProductos {
             tr {
+
                 .celdaCantidad,
                 .celdaProducto,
                 .celdaPrecio,
@@ -317,7 +319,7 @@
             }
 
             .titulosCarrito {
-                th{
+                th {
                     h2 {
                         font-size: 1.2rem;
                     }
@@ -338,6 +340,7 @@
 @media (max-width: 600px) {
     .contenedorCarrito {
         width: 85vw;
+
         .contenedorCarritoProductos {
             tr {
 
@@ -358,7 +361,7 @@
 
                 .btnCarritoX {
                     width: 1.8rem;
-                        height: 1.8rem;
+                    height: 1.8rem;
                 }
 
                 .celdaCantidad {
@@ -372,7 +375,7 @@
             }
 
             .titulosCarrito {
-                th{
+                th {
                     h2 {
                         font-size: 1.1rem;
                     }
@@ -385,17 +388,20 @@
 @media (max-width: 500px) {
     .contenedorCarrito {
         width: 95vw;
+
         .contenedorCarritoProductos {
             font-size: 80%;
+
             tr {
 
-                td, th {
+                td,
+                th {
                     padding: 5px;
                 }
 
                 .celdaCantidad,
                 .celdaProducto,
-                .celdaPrecio, 
+                .celdaPrecio,
                 .celdaSubtotal {
                     h3 {
                         font-size: 0.7rem;
@@ -410,7 +416,7 @@
 
                 .btnCarritoX {
                     width: 1.6rem;
-                        height: 1.6rem;
+                    height: 1.6rem;
                 }
 
                 .celdaCantidad {
@@ -425,19 +431,43 @@
             }
 
             .titulosCarrito {
-                th{
+                th {
                     h2 {
                         font-size: 0.8rem;
                     }
                 }
             }
         }
-       
-        .btnCarritoFinalizar {    
+
+        .btnCarritoFinalizar {
             button {
                 font-size: 1.1rem;
                 padding: 7px 12px;
             }
         }
     }
+}
+
+
+// PRODUCTO
+@media (max-width: 1024px) {
+    .contenedorImagenTitulo {
+        display: flex;
+        /* Cambia inline-flex a flex */
+        flex-direction: column;
+        margin: 2rem 4rem;
+
+        div {
+            width: 100%;
+            
+            button, p {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        img {
+            align-self: center;
+        }
+}
 }

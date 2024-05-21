@@ -1,0 +1,68 @@
+.contenedorImagenTitulo {
+    margin: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 30rem;
+        height: 28rem;
+        margin-right: 1.8rem;
+        margin-top: 1rem;
+    }
+
+    div {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 60%;
+
+        h1 {
+            font-size: 2rem;
+            text-align: start;
+            margin-bottom: 10px;
+            color: $letraOscura;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            color: $colorPrincipal;
+            margin-bottom: 1px;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: bold;
+
+            span {
+                font-weight: normal;
+                text-decoration: line-through;
+                opacity: 75%;
+            }
+        }
+
+        button {
+            @include botonPrincipal;
+            font-size: 1.3rem;
+            border-radius: 10px;
+
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 2.2;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.contenedorInfo {
+    margin: 4rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+    color: $letraOscura;
+    opacity: 75%;
+    text-align: justify;
+    line-height: 1.7;
+}

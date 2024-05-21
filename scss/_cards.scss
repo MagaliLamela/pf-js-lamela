@@ -39,6 +39,7 @@
         }
 
         h2 {
+            color: $letraOscura;
             text-align: center;
             font-size: 1.6rem;
             margin-top: 15px;
@@ -113,4 +114,8 @@
     100% {
         transform: rotateZ(0);
     }
+}
+
+.anclaProductos {
+    text-decoration: none;
 }
