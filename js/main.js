@@ -55,7 +55,7 @@ function mostrarProductos(productosCategoriaOFiltrados) {
 
         // Rellenar el contenido del div con los datos del producto y agregarle un enlace a su propia página a cada producto
         divProducto.innerHTML = `
-        <a href="${rutaBaseImagenes}/producto.html?id=${producto.id}" class="anclaProductos">
+        <a href="https://magalilamela.github.io/pf-js-lamela/html/producto.html?id=${producto.id}" class="anclaProductos">
         <img src="${rutaBaseImagenes}${producto.imagen}" class="card-img-top mx-auto" alt="${producto.nombre}">
         <h2 class="card-title nombreProducto">${producto.nombre}</h2>
         <h3> 
