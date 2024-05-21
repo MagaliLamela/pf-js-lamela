@@ -33,9 +33,9 @@ inputBuscador.addEventListener("keypress", function (event) {
         localStorage.setItem("terminosBusqueda", terminosBusqueda);
 
         // Redirige a la página de resultados de búsqueda
-        if (window.location.pathname.includes("index.html")) {
+        if (window.location.pathname.includes("carrito-compra.html") || window.location.pathname.includes("contacto.html") || window.location.pathname.includes("producto.html") || window.location.pathname.includes("productos-gatos.html") || window.location.pathname.includes("productos-perros.html") || window.location.pathname.includes("resultados-busqueda.html") || window.location.pathname.includes("servicios.html")) {
             window.location.href = "./html/resultados-busqueda.html";
-        } else {
+        } else if (window.location.pathname.includes("index.html") || window.location.pathname.includes("/")) {
             window.location.href = "./resultados-busqueda.html";
         }
     }
