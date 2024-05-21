@@ -12,20 +12,24 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
         if (producto) {
             rellenarHTML(producto);
         } else {
-            contenedorProductoIndividual.innerHTML = '<p>Producto no encontrado.</p>';
+            contenedorProductoIndividual.innerHTML = `<div class = "productoNoEncontrado">
+            <p>Producto no encontrado.</p>
+            <button class = "btnVolver"> <a href="../index.html">Volver a la tienda</a></button> 
+            </div>`;
             contenedorInfo.innerHTML = '';
         }
     })
     .catch((error) => {
         console.error('Error al cargar el archivo JSON:', error);
-        contenedorProductoIndividual.innerHTML = '<p>Error al cargar los datos del producto.</p>';
+        contenedorProductoIndividual.innerHTML = `<p class = "productoNoEncontrado">Error al cargar los datos del producto.</p> 
+        <button class = "btnVolver"> <a href="../index.html">Volver a la tienda</a></button> `;
         contenedorInfo.innerHTML = '';
     });
 
-    const rellenarHTML = (producto) => {
-        const div = document.createElement("div");
-        div.classList.add("contenedorImagenTitulo");
-        div.innerHTML = `
+const rellenarHTML = (producto) => {
+    const div = document.createElement("div");
+    div.classList.add("contenedorImagenTitulo");
+    div.innerHTML = `
             <img src="${rutaBaseImagenes}${producto.imagen}" alt="${producto.nombre}">
             <div>
             <h1>${producto.nombre}</h1>
@@ -40,16 +44,18 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
             </p>
             </div>
         `;
-        contenedorProductoIndividual.append(div);
+    contenedorProductoIndividual.append(div);
 
-        const div2 = document.createElement("div");
-        div2.classList.add("contenedorInfo");
-        div2.innerText = producto.info;
-        contenedorInfo.append(div2);
+    const div2 = document.createElement("div");
+    div2.classList.add("contenedorInfo");
+    div2.innerText = producto.info;
+    contenedorInfo.append(div2);
 
 
-        btnAgregar = document.querySelectorAll(".btnProductos");
-        btnAgregar.forEach(boton => {
-            boton.addEventListener("click", agregarProductoAlCarrito);
-        });
-    };
+    btnAgregar = document.querySelectorAll(".btnProductos");
+    btnAgregar.forEach(boton => {
+        boton.addEventListener("click", agregarProductoAlCarrito);
+    });
+};
+
+

@@ -130,7 +130,7 @@ function eliminarProducto(e) {
 
     // Encontrar el índice del producto en el array de productos en el carrito
     const indice = productosEnCarrito.findIndex(p => p.id === botonId);
-    
+
     // Eliminar el producto del array
     productosEnCarrito.splice(indice, 1);
 
@@ -145,7 +145,7 @@ function eliminarProducto(e) {
 //* Función para aumentar la cantidad de un producto en el carrito
 function aumentarCantidad(e) {
     // Obtener el ID del producto desde el atributo data-id del botón
-    const botonId = e.currentTarget.dataset.id; 
+    const botonId = e.currentTarget.dataset.id;
 
     // Encontrar el producto en el array de productos en el carrito
     const producto = productosEnCarrito.find(p => p.id === botonId);
@@ -162,7 +162,7 @@ function aumentarCantidad(e) {
 //* Función para disminuir la cantidad de un producto en el carrito
 function disminuirCantidad(e) {
     // Obtener el ID del producto desde el atributo data-id del botón
-    const botonId = e.currentTarget.dataset.id; 
+    const botonId = e.currentTarget.dataset.id;
 
     // Encontrar el producto en el array de productos en el carrito
     const producto = productosEnCarrito.find(p => p.id === botonId);
@@ -177,10 +177,10 @@ function disminuirCantidad(e) {
     };
 
     // Actualizar el carrito en el almacenamiento local
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito)); 
-    
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+
     // Volver a cargar los productos en el carrito
-    cargarProductosCarrito(); 
+    cargarProductosCarrito();
 }
 
 
@@ -201,7 +201,7 @@ function finalizarCompra() {
     // Actualizar el carrito en el almacenamiento local
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 
-    
+
     // Ocultar la sección del carrito y de carrito vacío y mostrar el mensaje de compra realizada
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoProductos.classList.add("disabled");

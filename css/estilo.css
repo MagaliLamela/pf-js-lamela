@@ -885,6 +885,36 @@ footer {
   line-height: 1.7;
 }
 
+.productoNoEncontrado {
+  text-align: center;
+}
+.productoNoEncontrado p {
+  font-size: 2rem;
+  margin: 4rem;
+  text-align: center;
+  font-weight: bold;
+}
+.productoNoEncontrado .btnVolver {
+  background-color: #661D58;
+  color: #fafafa;
+  padding: 10px;
+  border: #661D58 solid 1px;
+  transition: all 0.3s;
+  margin: 4rem;
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+.productoNoEncontrado .btnVolver:hover {
+  background-color: #9C4A8C;
+  color: #fafafa;
+  border: none;
+}
+.productoNoEncontrado .btnVolver a {
+  text-decoration: none;
+  color: #fafafa;
+}
+
 /*RESPONSIVE*/
 /*GENERAL*/
 @media (max-width: 768px) {
@@ -1208,7 +1238,8 @@ footer {
   .contenedorImagenTitulo div {
     width: 100%;
   }
-  .contenedorImagenTitulo div button, .contenedorImagenTitulo div p {
+  .contenedorImagenTitulo div button,
+  .contenedorImagenTitulo div p {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }

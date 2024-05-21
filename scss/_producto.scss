@@ -66,3 +66,27 @@
     text-align: justify;
     line-height: 1.7;
 }
+
+.productoNoEncontrado {
+
+    text-align: center;
+
+    p {
+        font-size: 2rem;
+        margin: 4rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .btnVolver {
+        @include botonPrincipal;
+        margin: 4rem;
+        margin-top: 0;
+        font-size: 1.5rem;
+        border-radius: 10px;
+
+        a {
+            @include anclas;
+        }
+    }
+}

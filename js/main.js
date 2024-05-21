@@ -16,7 +16,7 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
         } else if (window.location.pathname.includes("resultados-busqueda.html")) {
             rutaBaseImagenes = '../';
             cargarProductosFiltrados()
-        }  else if (window.location.pathname.includes("servicios.html") || window.location.pathname.includes("contacto") || window.location.pathname.includes("producto.html")) {
+        } else if (window.location.pathname.includes("servicios.html") || window.location.pathname.includes("contacto") || window.location.pathname.includes("producto.html")) {
             rutaBaseImagenes = '../';
         } else if (window.location.pathname.includes("index.html") || window.location.pathname.includes("/")) {
             rutaBaseImagenes = './';

@@ -132,18 +132,18 @@
             }
         }
     }
+
     .contenedorBtnFinalizarCompra {
         display: flex;
         justify-content: end;
         margin-bottom: 30px;
-    .btnCarritoFinalizar {
-        
-        @include botonPrincipal;
-        font-size: 1.3rem;
-        border-radius: 15px;
-        padding: 10px 15px;
+
+        .btnCarritoFinalizar {
+
+            @include botonPrincipal;
+            font-size: 1.3rem;
+            border-radius: 15px;
+            padding: 10px 15px;
+        }
     }
 }
-    }
-
-
