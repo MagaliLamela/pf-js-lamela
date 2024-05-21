@@ -5,7 +5,6 @@ const btnCerrarBuscador = document.querySelector(".btnCerrarBuscador");
 const inputBuscador = document.querySelector(".inputBuscador");
 const contenedorResultados = document.querySelector(".contenedorResultados");
 
-
 //! VARIABLES
 let terminosBusqueda; // Variable para almacenar los términos de búsqueda
 
@@ -44,19 +43,36 @@ inputBuscador.addEventListener("keypress", function (event) {
 
 
 //! CÓDIGO PARA LA PÁGINA DE RESULTADOS DE BÚSQUEDA
-function cargarProductosFiltrados() {
+// Esta función se encarga de mostrar los productos filtrados en la página de resultados de búsqueda.
+function mostrarProductosFiltrados() {
 
     // Obtener el contenedor donde se mostrarán los productos
     contenedorProductos = document.getElementById("contenedorResultados");
 
+    // Obtener el elemento h1 para mostrar el título
+    const h1ProductosFiltrados = document.getElementById("h1ProductosFiltrados");
+
     // Obtener los términos de búsqueda almacenados en el localStorage
     const terminos = localStorage.getItem("terminosBusqueda");
+
+    // Actualizar el contenido del h1 con los términos de búsqueda
+    h1ProductosFiltrados.textContent = `Resultados de búsqueda de "${terminos}"`;
 
     // Filtrar los productos que coinciden con los términos de búsqueda
     const productosFiltrados = productos.filter(producto => {
         return producto.nombre.toLowerCase().includes(terminos.toLowerCase()) || producto.categorias.some(categoria => categoria.toLowerCase().includes(terminos.toLowerCase()));
     });
 
+    // Verificar si hay productos que coincidan con los términos de búsqueda
+    if (productosFiltrados.length === 0) {
+        // Mostrar mensaje de que no se encontraron productos
+        contenedorProductos.innerHTML = `<div class = "productoNoEncontrado">
+        <p>Producto no encontrado.</p>
+        <button class = "btnVolver"> <a href="../index.html">Volver a la tienda</a></button> 
+        </div>`;
+    } else {
+        // Mostrar los productos filtrados que coinciden con los términos de búsqueda en la interfaz.
+        mostrarProductos(productosFiltrados);
+    }
 
-    mostrarProductos(productosFiltrados);
 }

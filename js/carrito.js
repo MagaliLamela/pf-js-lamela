@@ -209,5 +209,5 @@ function finalizarCompra() {
     contenedorCarritoComprado.classList.remove("disabled");
 }
 
-// Agregar evento al botón de finalizar compra
+//* Agregar evento al botón de finalizar compra
 btnFinalizarCompra.addEventListener("click", finalizarCompra);

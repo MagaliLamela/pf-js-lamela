@@ -1,32 +1,47 @@
+//! LLAMADOS DEL DOM
 const contenedorProductoIndividual = document.querySelector("#contenedorProductoIndividual");
 const contenedorInfo = document.querySelector("#contenedorInfo");
+
+
+//! Obtener los parámetros de la URL para identificar el producto específico que se va a mostrar
 const urlParams = new URLSearchParams(window.location.search);
 const idParam = urlParams.get('id');
 
 
+//! FETCH
+// Realizar una solicitud fetch para obtener los datos del producto desde el archivo JSON
 fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
     .then(res => res.json())
     .then((data) => {
-        // Find the product with the matching ID
+        // Encontrar el producto con el ID coincidente
         const producto = data.find(item => item.id === idParam);
         if (producto) {
-            rellenarHTML(producto);
+            // Si se encuentra el producto, rellenar el HTML con los datos del producto
+            rellenarHTMLProducto(producto);
         } else {
+            // Si no se encuentra el producto, mostrar un mensaje de "Producto no encontrado"
             contenedorProductoIndividual.innerHTML = `<div class = "productoNoEncontrado">
             <p>Producto no encontrado.</p>
             <button class = "btnVolver"> <a href="../index.html">Volver a la tienda</a></button> 
             </div>`;
+            // Limpiar el contenedor de información del producto
             contenedorInfo.innerHTML = '';
         }
     })
     .catch((error) => {
+        // Manejar errores en caso de que falle la solicitud fetch
         console.error('Error al cargar el archivo JSON:', error);
+        // Mostrar un mensaje de error al cargar los datos del producto
         contenedorProductoIndividual.innerHTML = `<p class = "productoNoEncontrado">Error al cargar los datos del producto.</p> 
         <button class = "btnVolver"> <a href="../index.html">Volver a la tienda</a></button> `;
+        // Limpiar el contenedor de información del producto
         contenedorInfo.innerHTML = '';
     });
 
-const rellenarHTML = (producto) => {
+
+//! Función para rellenar el HTML con los datos del producto
+const rellenarHTMLProducto = (producto) => {
+    // Crear un contenedor para la imagen y el título del producto
     const div = document.createElement("div");
     div.classList.add("contenedorImagenTitulo");
     div.innerHTML = `
@@ -46,12 +61,13 @@ const rellenarHTML = (producto) => {
         `;
     contenedorProductoIndividual.append(div);
 
+    // Crear un contenedor para la información adicional del producto
     const div2 = document.createElement("div");
     div2.classList.add("contenedorInfo");
     div2.innerText = producto.info;
     contenedorInfo.append(div2);
 
-
+    // Obtener todos los botones de "Añadir al Carrito" y agregarles un evento de click
     btnAgregar = document.querySelectorAll(".btnProductos");
     btnAgregar.forEach(boton => {
         boton.addEventListener("click", agregarProductoAlCarrito);

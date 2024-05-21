@@ -2,11 +2,14 @@
 // Array que contiene información sobre los productos disponibles
 let productos = [];
 
+
+//! FETCH 
+//Obtengo los datos de los productos desde un archivo JSON
 fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
     .then(res => res.json())
     .then(data => {
         productos = data;
-        // Llamados específicos para cada página
+        // Lógica para mostrar productos en diferentes páginas
         if (window.location.pathname.includes("productos-perros.html")) {
             rutaBaseImagenes = '../';
             mostrarProductosPorCategoria("perros", "contenedorPerros");
@@ -15,7 +18,7 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
             mostrarProductosPorCategoria("gatos", "contenedorGatos");
         } else if (window.location.pathname.includes("resultados-busqueda.html")) {
             rutaBaseImagenes = '../';
-            cargarProductosFiltrados()
+            mostrarProductosFiltrados()
         } else if (window.location.pathname.includes("servicios.html") || window.location.pathname.includes("contacto") || window.location.pathname.includes("producto.html")) {
             rutaBaseImagenes = '../';
         } else if (window.location.pathname.includes("index.html") || window.location.pathname.includes("/")) {
@@ -24,28 +27,35 @@ fetch("https://magalilamela.github.io/pf-js-lamela/data/productos.json")
         }
     })
 
+
 //! LLAMADOS DEL DOM
 let btnAgregar;
-const numeroCantidad = document.querySelector(".numeroCantidad");
-let contenedorProductos;
-let rutaBaseImagenes;
+const numeroCantidad = document.querySelector(".numeroCantidad"); // Número de productos en el carrito
+let contenedorProductos; // Contenedor donde se muestran los productos
+let rutaBaseImagenes; // Ruta base para las imágenes
 
 
 //! FUNCIÓN PARA CARGAR PRODUCTOS EN LA INTERFAZ
-
+// Esta función toma una lista de productos y los muestra en la interfaz de usuario
 function mostrarProductos(productosCategoriaOFiltrados) {
+
+    // Iterar sobre cada producto en la lista
     productosCategoriaOFiltrados.forEach(producto => {
 
+        // Crear un elemento div para representar el producto en la interfaz
         const divProducto = document.createElement("div");
 
+        // Agregar clases CSS al div para darle estilo (Bootstrap grid classes)
         divProducto.classList.add("card", "cardIndividual", "col-xl-3", "col-lg-4", "col-md-6", "col-sm-12", "h-100");
 
+        // Si la página actual es el index.html, quitar la clase col-lg-4 para adaptar el diseño
         if (window.location.pathname === '/index.html') {
             divProducto.classList.remove("col-lg-4");
         }
 
+        // Rellenar el contenido del div con los datos del producto y agregarle un enlace a su propia página a cada producto
         divProducto.innerHTML = `
-        <a href="https://magalilamela.github.io/pf-js-lamela/html/producto.html?id=${producto.id}" class="anclaProductos">
+        <a href="${rutaBaseImagenes}/producto.html?id=${producto.id}" class="anclaProductos">
         <img src="${rutaBaseImagenes}${producto.imagen}" class="card-img-top mx-auto" alt="${producto.nombre}">
         <h2 class="card-title nombreProducto">${producto.nombre}</h2>
         <h3> 
@@ -56,8 +66,12 @@ function mostrarProductos(productosCategoriaOFiltrados) {
         <button type="button" class="btnProductos" id="${producto.id}"> Añadir al Carrito </button>
       `;
 
+        // Agregar el elemento div del producto al contenedor de productos en la interfaz
         contenedorProductos.appendChild(divProducto);
     });
+
+
+    // Obtener todos los botones de "Añadir al Carrito" y agregarles un evento de click
     btnAgregar = document.querySelectorAll(".btnProductos");
     btnAgregar.forEach(boton => {
         boton.addEventListener("click", agregarProductoAlCarrito);
@@ -74,6 +88,8 @@ function mostrarProductosPorCategoria(categoria, contenedorId) {
     const productosPorCategoria = productos.filter(producto => {
         return producto.categorias && producto.categorias.includes(categoria);
     });
+
+    // Llamar a la función mostrarProductos para mostrar los productos filtrados por categoría en el contenedor especificado
     mostrarProductos(productosPorCategoria);
 };
 
@@ -122,7 +138,7 @@ function agregarProductoAlCarrito(e) {
         duration: 2000,
         close: true,
         offset: {
-            y: 70 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            y: 70
         },
         style: {
             background: "#9C4A8C",
