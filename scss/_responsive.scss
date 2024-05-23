@@ -293,6 +293,19 @@
 
 /*CARRITO DE COMPRAS*/
 
+@media (max-width: 600px) {
+    .contenedorFormularioCarrito {
+
+        .formNombreApellido,
+        .formPais,
+        .formCalle,
+        .formDatosContacto {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
 @media (max-width: 850px) {
     .contenedorCarrito {
         width: 80vw;

@@ -167,9 +167,10 @@
     .formCalle,
     .formDatosContacto {
         display: flex;
+        width: 78vw;
 
         input {
-            width: 40vw;
+            width: 100%;
         }
     }
 

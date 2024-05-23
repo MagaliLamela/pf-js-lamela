@@ -831,12 +831,13 @@ footer {
 .contenedorFormularioCarrito .formCalle,
 .contenedorFormularioCarrito .formDatosContacto {
   display: flex;
+  width: 78vw;
 }
 .contenedorFormularioCarrito .formNombreApellido input,
 .contenedorFormularioCarrito .formPais input,
 .contenedorFormularioCarrito .formCalle input,
 .contenedorFormularioCarrito .formDatosContacto input {
-  width: 40vw;
+  width: 100%;
 }
 .contenedorFormularioCarrito input {
   height: 3.1rem;
@@ -1195,6 +1196,15 @@ footer {
   }
 }
 /*CARRITO DE COMPRAS*/
+@media (max-width: 600px) {
+  .contenedorFormularioCarrito .formNombreApellido,
+  .contenedorFormularioCarrito .formPais,
+  .contenedorFormularioCarrito .formCalle,
+  .contenedorFormularioCarrito .formDatosContacto {
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media (max-width: 850px) {
   .contenedorCarrito {
     width: 80vw;
