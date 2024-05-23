@@ -677,6 +677,10 @@ footer {
 }
 
 /*CARRITO DE COMPRAS*/
+.h1Carrito {
+  margin-bottom: 0;
+}
+
 .carritoVacioYComprado p {
   font-size: 1.5rem;
   margin: 20px;
@@ -709,6 +713,7 @@ footer {
   justify-content: center;
   width: 75vw;
   flex-direction: column;
+  margin-top: 30px;
 }
 .contenedorCarrito .contenedorCarritoProductos {
   margin-bottom: 20px;
@@ -815,6 +820,59 @@ footer {
   background-color: #9C4A8C;
   color: #fafafa;
   border: none;
+}
+
+.contenedorFormularioCarrito h2 {
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+.contenedorFormularioCarrito .formNombreApellido,
+.contenedorFormularioCarrito .formPais,
+.contenedorFormularioCarrito .formCalle,
+.contenedorFormularioCarrito .formDatosContacto {
+  display: flex;
+}
+.contenedorFormularioCarrito .formNombreApellido input,
+.contenedorFormularioCarrito .formPais input,
+.contenedorFormularioCarrito .formCalle input,
+.contenedorFormularioCarrito .formDatosContacto input {
+  width: 40vw;
+}
+.contenedorFormularioCarrito input {
+  height: 3.1rem;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+.contenedorFormularioCarrito input:focus {
+  outline: #661D58 solid 3px;
+}
+.contenedorFormularioCarrito .btnFormCarrito {
+  display: flex;
+  justify-content: end;
+}
+.contenedorFormularioCarrito .btnFormCarrito .botonFormulario {
+  background-color: #661D58;
+  color: #fafafa;
+  padding: 10px;
+  border: #661D58 solid 1px;
+  transition: all 0.3s;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  width: 220px;
+  height: 55px;
+}
+.contenedorFormularioCarrito .btnFormCarrito .botonFormulario:hover {
+  background-color: #9C4A8C;
+  color: #fafafa;
+  border: none;
+}
+.contenedorFormularioCarrito .btnFormCarrito .botonFormulario:active {
+  border: #661D58 1px solid;
+  font-size: 1.3rem;
 }
 
 .contenedorImagenTitulo {

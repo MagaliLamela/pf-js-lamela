@@ -71,17 +71,18 @@
 
     <main>
 
-        <h1> Mi carrito </h1>
+        <h1 class="h1Carrito"> Mi carrito </h1>
 
         <div class="container-fluid contenedorCarrito">
 
-            <div class="carritoVacioYComprado" id="carritoVacio">
+            <div class="carritoVacioYComprado disabled" id="carritoVacio">
                 <p>Tu carrito está vacío.</p>
                 <button> <a href="../index.html">Volver a la tienda</a></button>
             </div>
 
             <div class="carritoVacioYComprado disabled" id="carritoComprado">
                 <p>¡Muchas gracias por tu compra!</p>
+                <p>En breve, le llegará un mail con el link de pago y el detalle de la misma.</p>
                 <button> <a href="../index.html">Volver a la tienda</a></button>
             </div>
 
@@ -91,6 +92,38 @@
 
             <div class="contenedorBtnFinalizarCompra">
                 <button id="btnCarritoFinalizar" class="btnCarritoFinalizar disabled">Finalizar Compra</button>
+            </div>
+
+            <div class="contenedorFormularioCarrito disabled" id="contenedorFormularioCarrito">
+                <h2>Datos de Contacto</h2>
+                <form id="formularioCarrito">
+                    <div class="formNombreApellido">
+                        <input type="text" id="nombre" placeholder="Nombre" required>
+
+                        <input type="text" id="apellido" placeholder="Apellido" required>
+                    </div>
+                    <div class="formPais">
+                        <input type="text" id="pais" placeholder="País" required>
+
+                        <input type="text" id="provincia" placeholder="Provincia" required>
+
+                        <input type="text" id="ciudad" placeholder="Ciudad" required>
+                    </div>
+                    <div class="formCalle">
+                        <input type="text" id="calle" placeholder="Calle" required>
+
+                        <input type="text" id="numero" placeholder="Número / Piso / Depto" required>
+
+                        <input type="text" id="codigoPostal" placeholder="Código Postal" required>
+                    </div>
+                    <div class="formDatosContacto">
+                        <input type="email" id="email" placeholder="E-mail" required>
+
+                        <input type="text" id="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="btnFormCarrito">
+                        <input class="botonFormulario" id="btnRealizarPedido" type="submit" value="Realizar Pedido">
+                    </div>
             </div>
 
         </div>

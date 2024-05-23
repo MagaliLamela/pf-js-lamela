@@ -3,6 +3,9 @@ const contenedorCarritoVacio = document.querySelector("#carritoVacio");
 const contenedorCarritoProductos = document.querySelector("#contenedorCarritoProductos");
 const btnFinalizarCompra = document.querySelector("#btnCarritoFinalizar");
 const contenedorCarritoComprado = document.querySelector("#carritoComprado");
+const contenedorFormularioCarrito = document.querySelector("#contenedorFormularioCarrito");
+const btnRealizarPedido = document.querySelector("#btnRealizarPedido");
+const formularioCarrito = document.querySelector("#formularioCarrito");
 
 
 //! VARIABLES PARA REFERENCIAR ELEMENTOS DEL DOM RELACIONADOS CON LA MANIPULACIÓN DEL CARRITO DE COMPRAS
@@ -23,6 +26,7 @@ function cargarProductosCarrito() {
         contenedorCarritoProductos.classList.remove("disabled");
         btnFinalizarCompra.classList.remove("disabled");
         contenedorCarritoComprado.classList.add("disabled");
+        contenedorFormularioCarrito.classList.add("disabled");
 
         // Limpiar el contenedor de productos en el carrito
         contenedorCarritoProductos.innerHTML = "";
@@ -116,6 +120,7 @@ function cargarProductosCarrito() {
         contenedorCarritoProductos.classList.add("disabled");
         btnFinalizarCompra.classList.add("disabled");
         contenedorCarritoComprado.classList.add("disabled")
+        contenedorFormularioCarrito.classList.add("disabled");
     }
 }
 
@@ -196,6 +201,21 @@ function calcularPrecioTotal() {
 
 //* Función para Finalizar Compra
 function finalizarCompra() {
+    // Ocultar la sección del carrito y de carrito vacío y mostrar el mensaje de compra realizada
+    contenedorCarritoVacio.classList.add("disabled");
+    contenedorCarritoProductos.classList.add("disabled");
+    btnFinalizarCompra.classList.add("disabled");
+    contenedorCarritoComprado.classList.add("disabled");
+    contenedorFormularioCarrito.classList.remove("disabled");
+
+}
+
+//* Agregar evento al botón de finalizar compra
+btnFinalizarCompra.addEventListener("click", finalizarCompra);
+
+
+//* Función para Realizar Pedido
+function realizarPedido() {
     productosEnCarrito.length = 0;  // Vaciar el array de productos en el carrito
 
     // Actualizar el carrito en el almacenamiento local
@@ -207,7 +227,25 @@ function finalizarCompra() {
     contenedorCarritoProductos.classList.add("disabled");
     btnFinalizarCompra.classList.add("disabled");
     contenedorCarritoComprado.classList.remove("disabled");
+    contenedorFormularioCarrito.classList.add("disabled");
+
 }
 
 //* Agregar evento al botón de finalizar compra
-btnFinalizarCompra.addEventListener("click", finalizarCompra);
+btnRealizarPedido.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Validar el formulario
+    if (formularioCarrito.checkValidity()) {
+        // Vaciar el carrito
+        productosEnCarrito = [];
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+
+        // Ocultar el formulario y mostrar el mensaje de carrito comprado
+        contenedorFormularioCarrito.classList.add("disabled");
+        contenedorCarritoComprado.classList.remove("disabled");
+    } else {
+        // Si el formulario no es válido, mostrar los mensajes de error
+        formularioCarrito.reportValidity();
+    }
+});
